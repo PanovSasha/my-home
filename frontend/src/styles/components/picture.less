@@ -1,0 +1,31 @@
+@import 'descriptions';
+
+.picture {
+  .radius(8);
+  overflow: hidden;
+  position: relative;
+
+  &__img {
+    .abs-alignment();
+    .object-fit();
+    .transition(scale, .2s);
+
+    .picture--scale:hover & {
+      @media @large-than-tablet {
+        scale: 1.01;
+      }
+    }
+  }
+
+
+  .shell__block--with-img-and-squares & {
+    .radius();
+    width: 100%;
+    border: 1px solid @blue20;
+    aspect-ratio: 592/712;
+
+    @media @tablet {
+      aspect-ratio: 336/192;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@import "descriptions";
+
+.shell {
+  &--grid {
+    display: grid;
+  }
+
+  &--color-white {
+    color: @white;
+  }
+
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &--tablet-flex {
+    @media @tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &--tablet-flex-reverse {
+    @media @tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &--gap-32 {
+    gap: @offset32;
+  }
+
+  &--gap-32-32-24 {
+    gap: @offset32;
+
+    @media @l-mobile {
+      gap: @offset24;
+    }
+  }
+
+  &--gap-32-24-16 {
+    gap: @offset32;
+
+    @media @tablet {
+      gap: @offset24;
+    }
+
+    @media @l-mobile {
+      gap: @offset16;
+    }
+  }
+
+  &--gap-32-16-16 {
+    gap: @offset32;
+
+    @media @tablet {
+      gap: @offset16;
+    }
+
+    @media @l-mobile {
+      gap: @offset16;
+    }
+  }
+
+  &__block {
+    .f-column();
+    align-items: start;
+
+    &--center {
+      align-items: center;
+    }
+
+    &--justify-center {
+      justify-content: center;
+    }
+  }
+
+  &__square {
+    .square(72);
+
+    @media @tablet {
+      .square(52);
+    }
+
+    @media @l-mobile {
+      .square(32);
+    }
+
+    &--top {
+      .radius(2);
+      margin: 0 72px -@offset24  auto;
+
+      @media @tablet {
+        margin: 0 52px -@offset16  auto;
+      }
+
+      @media @l-mobile {
+        margin: 0 32px -@offset10  auto;
+      }
+
+      .shell__block--with-img-and-squares & {
+        background-color: @blue-main;
+      }
+
+      .shell__block--with-trans-content-bg & {
+        background-color: @turqs-alt-main;;
+      }
+    }
+
+    &--bottom {
+      background-color: @turqs-main;
+      margin: -@offset24 auto 0 72px;
+      position: relative;
+      z-index: 1;
+
+      @media @tablet {
+        margin: -@offset16 auto 0 52px;
+      }
+
+      @media @l-mobile {
+        margin: -@offset10 auto 0 32px;
+      }
+    }
+  }
+
+  &__subtitle {
+    .fs20-32(400);
+
+    @media @tablet {
+      .fs16-24(400);
+    }
+
+    @media @l-mobile {
+      .fs12-16(400);
+    }
+  }
+}

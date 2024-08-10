@@ -1,0 +1,79 @@
+@import "descriptions";
+
+.squares {
+  margin-block: auto -72px;
+  position: relative;
+
+  &__block-shell {
+    .radius();
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
+    box-shadow: 0 10px 10px -5px #8093BA2E, 0 20px 25px -5px #8093BA2E;
+    padding: @offset16;
+  }
+
+  &__block {
+    .f-column(24);
+    .radius();
+    border: 1px dashed @turqs-main;
+    background-color: @white80;
+    padding: @offset32;
+  }
+
+  &__block-title {
+    color: @black;
+  }
+
+  &__block-sutitle {
+    color: @neutral600;
+  }
+
+  &__square {
+    .radius(2);
+    position: absolute;
+
+    &--1 {
+      .width-height(64, 50);
+      left: -13dvw;
+      bottom: 70px;
+    }
+
+    &--2 {
+      .square(96);
+      left: -7dvw;
+      bottom: 112px;
+    }
+
+    &--3 {
+      .square(96);
+      left: -7dvw;
+      bottom: 112px;
+    }
+
+    &--4 {
+      .square(96);
+      left: -7dvw;
+      bottom: 112px;
+    }
+
+    &--5 {
+      .square(96);
+      left: -7dvw;
+      bottom: 112px;
+    }
+
+    &--6 {
+      .square(96);
+      left: -7dvw;
+      bottom: 112px;
+    }
+
+    &--transparent {
+      background-color: @white20;
+      border: 1px solid @white;
+    }
+
+    &--dashed {
+      border: 1px dashed @white;
+    }
+  }
+}

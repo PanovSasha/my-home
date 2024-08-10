@@ -1,0 +1,34 @@
+@import "descriptions";
+
+.tabs {
+  width: calc(100% + 2 * @desktop-padding);
+  margin-left: -@desktop-padding;
+  overflow: hidden;
+
+  @media @tablet {
+    width: calc(100% + 2 * @tablet-padding);
+    margin-left: -@tablet-padding;
+  }
+
+  @media @l-mobile {
+    width: calc(100% + 2 * @mobile-padding);
+    margin-left: -@mobile-padding;
+  }
+
+  &__shell {
+    display: flex;
+    gap: @offset16;
+    overflow: auto;
+    flex-wrap: nowrap;
+    padding: 2px @desktop-padding @offset24;
+    margin-bottom: -22px;
+
+    @media @tablet {
+      padding-inline: @tablet-padding;
+    }
+
+    @media @l-mobile {
+      padding-inline: @mobile-padding;
+    }
+  }
+}

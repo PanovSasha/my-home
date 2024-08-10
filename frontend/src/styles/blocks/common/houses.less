@@ -1,0 +1,71 @@
+@import "descriptions";
+
+.houses {
+  @media @tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media @l-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-inline: @mobile-padding;
+    margin-bottom: -@offset40;
+    padding-bottom: @offset40;
+  }
+
+  &__card {
+    .radius();
+    .f-column();
+    border: 1px solid @blue10;
+    padding: @offset16;
+
+    @media @l-mobile {
+      min-width: 81%;
+    }
+  }
+
+  &__card-picture {
+    aspect-ratio: 352/248;
+    margin-bottom: 9px;
+  }
+
+  &__card-title {
+    margin-bottom: @offset8;
+  }
+
+  &__card-tags {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  &__card-tag {
+    @media @tablet {
+      .fs12-16()
+    }
+
+    @media @l-mobile {
+      .fs10-16()
+    }
+
+    &--square {
+      align-self: start;
+      margin-right: auto;
+    }
+
+    &--year {
+      align-self: end;
+    }
+  }
+}
+
+.houses-shell {
+  @media @l-mobile {
+    width: calc(100% + 2 * @mobile-padding);
+    margin-left: -@mobile-padding;
+    overflow: hidden;
+  }
+}

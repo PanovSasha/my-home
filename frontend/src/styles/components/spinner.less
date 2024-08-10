@@ -1,0 +1,34 @@
+@import 'descriptions';
+
+.spinner {
+  .circle(48);
+  display: block;
+  border-top: 3px solid @black;
+  border-right: 3px solid transparent;
+  animation: rotation 1s linear infinite;
+  flex: none;
+  margin: auto;
+
+  .catalog & {
+    grid-column-end: 3;
+    margin-block: @offset40;
+
+    @media @l-tablet {
+      grid-column-end: -1;
+      margin-inline: unset;
+    }
+
+    @media @l-mobile {
+      margin-inline: auto;
+    }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

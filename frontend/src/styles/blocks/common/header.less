@@ -1,0 +1,40 @@
+@import "descriptions";
+
+.header {
+  position: relative;
+
+  &--main-page {
+    .f-column();
+    min-height: 560px;
+  }
+
+  &--sun-light {
+    animation: sun-light 9s infinite ease-in-out;
+  }
+
+  &__bg-shell {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  &__bg-img {
+    .abs-alignment();
+    .object-fit();
+  }
+}
+
+@keyframes sun-light {
+  20% {
+    filter: brightness(120%);
+  }
+
+  50% {
+    filter: brightness(160%);
+  }
+
+  90% {
+    filter: brightness(110%);
+  }
+}

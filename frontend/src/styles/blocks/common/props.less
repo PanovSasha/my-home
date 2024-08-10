@@ -1,0 +1,64 @@
+@import "descriptions";
+
+.props {
+  @media @tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media @l-mobile {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    .f-column();
+    align-items: center;
+    position: relative;
+
+    @media @l-mobile {
+      align-items: start;
+      padding-left: @offset72;
+      min-height: 56px;
+    }
+
+    &--only-title {
+      @media @l-mobile {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__card-icon {
+    .square(96);
+    margin-bottom: @offset24;
+
+    @media @l-mobile {
+      .square(56);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__card-title {
+    text-align: center;
+    margin-bottom: @offset16;
+
+    @media @l-mobile {
+      margin-bottom: @offset8;
+      text-align: left;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-subtitle {
+    text-align: center;
+
+    @media @l-mobile {
+      .fs12-16(400);
+      text-align: left;
+    }
+  }
+}

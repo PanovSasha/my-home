@@ -1,0 +1,57 @@
+@import "descriptions";
+
+.youtube {
+  .radius(8);
+  .shadow-xl();
+  border: 1px solid @blue20;
+  padding: @offset32;
+
+  @media @tablet {
+    grid-template-columns: 1fr;
+  }
+
+  &__picture {
+    .radius(8);
+    border: 1px solid @blue5;
+    aspect-ratio: 560/308;
+  }
+
+  &__picture-img {
+    scale: 1.005;
+  }
+
+  &__subtitle {
+    color: @neutral600;
+    margin-bottom: @offset16;
+  }
+
+  &__btn {
+    .radius(8);
+    .fs20-24();
+    .shadow-cta-gray();
+    color: @white;
+    padding: 15px 24px 17px 24px;
+    background: linear-gradient(180deg, #FF0100 0%, #C00100 100%);
+    margin-block: auto @offset24;
+
+    @media @tablet {
+      .fs14-16();
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      @media @large-than-tablet {
+        background: linear-gradient(180deg, #AF0100 0%, #C00100 100%);
+      }
+    }
+
+    &:active {
+      .shadow-lg();
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px @blue40;
+    }
+  }
+}

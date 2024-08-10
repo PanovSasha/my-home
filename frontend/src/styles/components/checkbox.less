@@ -1,0 +1,71 @@
+@import 'descriptions';
+
+
+.checkbox {
+  &__label {
+    .fs14-16(400);
+    display: flex;
+    align-items: start;
+    padding-left: @offset28;
+    cursor: pointer;
+    position: relative;
+
+    @media @tablet {
+      .fs12-16(400);
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+
+    input {
+      .v-hidden();
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &::before {
+      .transition(border-color);
+      .transition(background-color);
+      .square(24);
+      .radius(6);
+      position: absolute;
+      top: 0;
+      left: -32px;
+      content: '';
+      border: 1px solid @blue60;
+
+      @media @tablet {
+        top: -4px;
+      }
+
+      .checkbox__input:checked + & {
+        border: 1px solid @blue60;
+        background-color: @blue60;
+      }
+
+      .checkbox__input:focus-visible + & {
+        box-shadow: 0 0 0 2px @blue-main;
+      }
+    }
+  }
+
+  &__mark {
+    display: none;
+
+    .checkbox__input:checked ~ & {
+      .width-height(13, 12);
+      .smooth-show();
+      position: absolute;
+      top: 7px;
+      color: @white;
+      left: 3px;
+
+      @media @tablet {
+        top: 3px;
+      }
+    }
+  }
+}

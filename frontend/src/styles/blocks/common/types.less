@@ -1,0 +1,59 @@
+@import "descriptions";
+
+.types {
+  @media @tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media @l-mobile {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    .f-column();
+    aspect-ratio: 383/336;
+    position: relative;
+    padding: @offset24 @offset28;
+
+    @media @l-mobile {
+      aspect-ratio: 336/128;
+    }
+  }
+
+  &__card-picture {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__card-bottom {
+    .f-between(16);
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      aspect-ratio: 384/128;
+      width: calc(100% + 2 * @offset28);
+      content: '';
+      position: absolute;
+      left: -28px;
+      bottom: -24px;
+      background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
+      z-index: -1;
+      pointer-events: none;
+      border-radius: 0 0 @offset8 @offset8;
+
+      @media @l-mobile {
+        aspect-ratio: 336/80;
+      }
+    }
+  }
+
+  &__card-title {
+    color: @white;
+  }
+
+  &__card-btn {
+    pointer-events: none;
+  }
+}
