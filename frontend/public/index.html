@@ -10,8 +10,8 @@
 
 <body class="body">
 
-<header class="header header--main-page header--sun-light js-header">
-  <div class="header__bg-shell">
+<header class="header header--main-page js-header">
+  <div class="header__bg-shell header__bg-shell--sun-light">
     <img
       class="header__bg-img"
       loading="lazy"
@@ -19,76 +19,595 @@
   </div>
   
   <div class="wrap">
-    <div class="topline">
-      <div class="topline__container">
-        <div class=""></div>
+    <div class="topline topline--main-page js-topline">
+      <div class="topline__logo-shell">
+        <button
+          type="button"
+          title="открыть выпадающее меню"
+          class="topline__burger js-topline-burger only-tablet accessibility-link"
+        >
+          <span class="topline__burger-line"></span>
+        </button>
         
-        <nav class="topline__nav js-topline-nav"
-             aria-label="основное меню сайта">
-          <div
-            class="topline__nav-item-container js-topline-nav-item-container">
+        <a
+          class="topline__logo-link accessibility-link"
+          href="/">
+          <svg class="topline__logo only-desktop">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#my-home"></use>
+          </svg>
+          
+          <svg class="topline__logo only-tablet">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#my-home-only-logo"></use>
+          </svg>
+        </a>
+        
+        <span class="topline__sign only-desktop">
+          Строим
+          <br>
+          честно
+        </span>
+      </div>
+      
+      <div class="topline__contact">
+        <div class="topline__contact-socials-shell">
+          <p class="topline__contact-title">
+            Присоединяйтесь к нам
+          </p>
+          
+          <div class="topline__contact-socials">
             <a
-              tabindex="2"
-              href="company.html"
-              class="accessibility-link topline__nav-item js-topline-nav-item topline__nav-item--with-submenu js-topline-nav-item-with-submenu"
-            >
-              О компании
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet topline__contact-social-icon--yt">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#youtube"></use>
+              </svg>
             </a>
             
-            <div class="topline__sub-nav-1 js-topline-sub-nav-1">
-              <div class="topline__sub-nav-1-tabs js-topline-sub-nav-tabs">
-                <a
-                  class="topline__sub-nav-1-item js-topline-sub-nav-1-item accessibility-link"
-                  href="gos-division.html"
-                >
-                  Дивизион государственных проектов
-                </a>
+            <a
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon only-desktop">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#vk"></use>
+              </svg>
+              
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#vk-white"></use>
+              </svg>
+            </a>
+            
+            <a
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet topline__contact-social-icon--tg">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="topline__contact-shell">
+          <div class="topline__contact-location">
+          </div>
+          
+          <div class="topline__contact-phone-shell">
+            <a
+              class="topline__contact-phone-link"
+              href="tel:+79052122685">
+              <svg class="icon icon--16">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#mobile"></use>
+              </svg>
+              
+              +7 905 212 2685
+            </a>
+            
+            <div class="topline__contact-mail-shell only-tablet">
+              <a
+                class="topline__contact-mail-link"
+                href="mailto:info@moidom.group">
+                info@moidom.group
+              </a>
+              
+              Отдел продаж
+            </div>
+            
+            <p class="topline__contact-phone-sign">
+              Ежедневно с&nbsp;10:00 до&nbsp;19:00
+            </p>
+            
+            <p class="topline__contact-address">
+              194000, Санкт-Петербург. посёлок
+              <br>
+              Здесьлово, Здесьское шоссе,
+              123, стр.1
+            </p>
+            
+            <p class="topline__contact-title only-tablet">
+              Контакты
+            </p>
+          </div>
+          
+          <div class="topline__contact-phone-shell only-desktop">
+            <a
+              class="topline__contact-phone-link"
+              href="tel:+78000000000">
+              <svg class="icon icon--16">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#phone"></use>
+              </svg>
+              
+              8 800 0000 000
+            </a>
+            
+            <p class="topline__contact-phone-sign">
+              Звонок бесплатный по&nbsp;РФ
+            </p>
+          </div>
+          
+          <div class="topline__order-btn-shell">
+            <a
+              class="btn btn--small btn--tertiary-orange js-animate-scroll topline__order-btn js-topline-order-btn"
+              href="#order">
+              Заказать звонок
+              
+              <svg class="icon icon--20">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="topline__arrow-box arrow-box">
+          <div class="arrow-box__line"></div>
+        </div>
+      </div>
+      
+      <div class="topline__nav">
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <svg class="icon icon--16">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#home"></use>
+          </svg>
+          
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="/">
+            Главная
+          </a>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="catalog.html">
+            Каталог домов
+          </a>
+          
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn"
+          >
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+          
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell shell shell--grid shell--2">
+              <div class="submenu__box-shell shell shell--grid shell--3">
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Технология
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Каркасные дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фахверковые дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Каркасные бани
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Площадь дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;100&nbsp;кв.м.
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;150&nbsp;кв.м.
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;200&nbsp;кв.м.
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Стиль дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Барнхаус
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Финские дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Современные
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Количество этажей
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    1-этажные
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    1,5-этажные
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    2-этажные
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Размер дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    6х6
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    7х7
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    8х8
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Особенности дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    С&nbsp;террасой
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Со&nbsp;вторым светом
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    С&nbsp;панорамными окнами
+                  </a>
+                </div>
+              </div>
+              
+              <div class="submenu__order">
+                <div class="submenu__order-picture picture">
+                  <img
+                    class="picture__img"
+                    loading="lazy" src="/assets/img/pages/main/submenu-bg.webp"
+                    alt="">
+                </div>
+                
+                <h2 class="h3 submenu__order-title">
+                  Оставьте заявку на&nbsp;консультацию
+                </h2>
                 
                 <a
-                  class="topline__sub-nav-1-item js-topline-sub-nav-1-item accessibility-link"
-                  href="com-division.html"
-                >
-                  Дивизион коммерческих проектов
-                </a>
-                
-                <a
-                  class="topline__sub-nav-1-item js-topline-sub-nav-1-item accessibility-link"
-                  href="anti-corruption.html"
-                >
-                  Антикоррупционная политика
-                </a>
-                
-                <a
-                  class="topline__sub-nav-1-item js-topline-sub-nav-1-item accessibility-link"
-                  href="our-team.html">
-                  Наша команда
+                  class="btn btn--small btn--tertiary-orange js-animate-scroll"
+                  href="#order">
+                  Заказать звонок
+                  
+                  <svg class="icon icon--20">
+                    <use
+                      xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                  </svg>
                 </a>
               </div>
             </div>
-            
-            <button tabindex="-1"
-                    class="topline__nav-item-open-btn js-topline-nav-item-open-btn"></button>
           </div>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text js-animate-scroll"
+            href="#houses">
+            Построенные объекты
+          </a>
           
-          <a class="topline__nav-item js-topline-nav-item accessibility-link"
-             href="projects.html">Проекты</a>
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn"
+          >
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
           
-          <a class="topline__nav-item js-topline-nav-item accessibility-link"
-             href="suppliers.html">Поставщикам</a>
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell shell shell--grid shell--2">
+              <div class="submenu__box-shell shell shell--grid shell--3">
+                <div class="submenu__box">
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="video.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Видеообзоры
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="photo.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фотогаллерея
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text js-animate-scroll"
+            href="#services">
+            Услуги
+          </a>
           
-          <a class="topline__nav-item js-topline-nav-item accessibility-link"
-             href="career.html">Карьера</a>
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn">
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
           
-          <a class="topline__nav-item js-topline-nav-item accessibility-link"
-             href="media-center.html">Медиацентр</a>
-          
-          <a class="topline__nav-item js-topline-nav-item accessibility-link"
-             href="contacts.html">Контакты</a>
-        </nav>
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell shell shell--grid shell--2">
+              <div class="submenu__box-shell shell shell--grid shell--3">
+                <div class="submenu__box">
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="projection.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Проектирование
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="foundations.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фундаменты
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="flexible-three.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Гибкое дерево
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="build-material.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Строительные материалы
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="vacancy.html">
+            Вакансии
+          </a>
+        </div>
+        
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="contacts.html">
+            Контакты
+          </a>
+        </div>
       </div>
     </div>
     
-    <div class="shell shell--grid  shell--2 shell--gap-32 squares">
+    <div class="shell shell--grid  shell--2 squares">
       <div
         class="squares__square squares__square--1 squares__square--dashed"></div>
       
@@ -107,7 +626,7 @@
           </p>
           
           <a
-            class="btn btn--secondary"
+            class="btn btn--secondary btn--big squares__btn"
             href="catalog.html">
             Посмотреть каталог
             
@@ -130,15 +649,19 @@
       
       <div
         class="squares__square squares__square--6 squares__square--transparent"></div>
+      
+      <div
+        class="squares__square squares__square--7 squares__square--dashed"></div>
+      
+      <div class="squares__shadow"></div>
     </div>
   </div>
 </header>
 
 <main class="main js-main">
   <section
-    class="section">
+    class="section section--spec-padding">
     <div class="wrap">
-      
       <h2 class="h1
                  section__title
                  align-center
@@ -150,13 +673,13 @@
         <div class="arrow-box__line"></div>
       </div>
       
-      <p class="section__subtitle align-center mb-40-32-24">
+      <p class="section__subtitle align-center mb-64-44-24">
         Слог нашей команды опытных строителей гарантирует не&nbsp;только
         высочайшее качество в&nbsp;реализации вашего проекта, но&nbsp;и&nbsp;непревзойденную
         надежность на&nbsp;каждом этапе строительства.
       </p>
       
-      <div class="shell shell--grid shell--4 shell--gap-32 props">
+      <div class="shell shell--grid shell--4 shell--gap-32 props props--build">
         <div class="props__card">
           <svg viewBox="0 0 96 96" fill="none"
                class="props__card-icon animate-svg js-animate-svg animate-svg--green"
@@ -434,9 +957,12 @@
           href="catalog.html">
           Посмотреть каталог
           
-          <svg class="icon icon--20">
-            <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
-          </svg>
+          <div class="svg-shell">
+            <svg class="icon icon--20">
+              <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
+        
         </a>
         
         <div class="btn-tertiary-bg"></div>
@@ -445,7 +971,9 @@
     </div>
   </section>
   
-  <section class="section section--border-top">
+  <section
+    id="services"
+    class="section section--border-top">
     <div class="wrap">
       <div
         class="shell shell--grid shell--2 shell--gap-32-24-16 shell--tablet-flex-reverse">
@@ -455,7 +983,7 @@
             производим
           </h2>
           
-          <div class="arrow-box mb-32-20-8">
+          <div class="arrow-box arrow-box--dotted mb-32-20-8">
             <div class="arrow-box__line"></div>
           </div>
           
@@ -525,7 +1053,7 @@
             частного дома &laquo;под ключ&raquo;
           </h2>
           
-          <div class="arrow-box mb-32-20-8">
+          <div class="arrow-box arrow-box--dotted mb-32-20-8">
             <div class="arrow-box__line"></div>
           </div>
           
@@ -588,6 +1116,7 @@
   </section>
   
   <section
+    id="houses"
     class="section section--bg-grey section--border-top-only-desktop">
     <div class="wrap">
       <h2 class="h1
@@ -740,9 +1269,11 @@
           href="photo.html">
           Посмотреть галерею
           
-          <svg class="icon icon--20">
-            <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
-          </svg>
+          <div class="svg-shell">
+            <svg class="icon icon--20">
+              <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
         </a>
         
         <div class="btn-tertiary-bg"></div>
@@ -774,7 +1305,7 @@
             ключ&raquo;
           </h2>
           
-          <div class="arrow-box mb-32-20-8">
+          <div class="arrow-box arrow-box--dotted mb-32-20-8">
             <div class="arrow-box__line"></div>
           </div>
           
@@ -926,7 +1457,9 @@
     </div>
   </section>
   
-  <section class="section section--no-tablet-padding">
+  <section
+    id="order"
+    class="section section--no-tablet-padding">
     <div class="wrap">
       <div class="order">
         <div class="picture order__bg-shell">
@@ -1305,7 +1838,7 @@
             </a>
             
             <a
-              class="footer__social-link accessibility-link accessibility-link--scale"
+              class="footer__social-link footer__social-link--tg accessibility-link accessibility-link--scale"
               href="">
               <svg class="icon icon--32">
                 <use xlink:href="/assets/sprite/sprite.svg#tg"></use>

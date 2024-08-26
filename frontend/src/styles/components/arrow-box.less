@@ -22,6 +22,19 @@
     right: -1px;
   }
 
+  &--dotted {
+    border-left: 1px solid transparent;
+
+    &::before {
+      .circle(5);
+      .absY-alignment();
+      background-color: @turqs-main;
+      border: unset;
+      left: 0;
+      content: '';
+    }
+  }
+
   &--mb-40 {
     margin-bottom: @offset40;
 

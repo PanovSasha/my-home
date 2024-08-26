@@ -36,6 +36,15 @@
       position: absolute;
       top: 0;
       left: 0;
+      margin-bottom: 0;
+    }
+
+    .props--build & {
+      margin-bottom: @offset44;
+
+      @media @l-mobile {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -50,6 +59,15 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    .props--build & {
+      .fs16-24();
+      text-transform: uppercase;
+
+      @media @l-mobile {
+        .fs14-16()
+      }
     }
   }
 

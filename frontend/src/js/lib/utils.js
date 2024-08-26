@@ -1,6 +1,5 @@
-import { $LOCAL_MENU, $TOPLINE, $WINDOW, LOCAL_SITE_MENU_CLASS, SHOW_CLASS, TABLET_WIDTH } from './constants'
+import { $BODY, $TOPLINE, $WINDOW, BODY_LOCK_CLASS, MOBILE_CLASS, TABLET_WIDTH } from './constants'
 import qs from 'qs'
-import { closeAllSubMenu } from '../common/topline'
 
 export const isEscPressed = ({ which }) => which === 27
 export const isEnterPressed = ({ which }) => which === 13
@@ -20,6 +19,8 @@ export const smoothScrollTo = (anchorOffset, behavior = 'smooth') => {
 export const animateScrollWhileClickToAnchor = () => {
   $('.js-animate-scroll').on('click', function (e) {
     e.preventDefault()
+    const $t = $(this)
+
     let fixedOffset
 
     if ($WINDOW.width() > TABLET_WIDTH) {
@@ -28,20 +29,27 @@ export const animateScrollWhileClickToAnchor = () => {
       fixedOffset = 70
     }
 
-    const anchor = $(this).attr('href')
+    if ($WINDOW.width() < TABLET_WIDTH) {
+      $TOPLINE.removeClass(MOBILE_CLASS)
+      $BODY.removeClass(BODY_LOCK_CLASS)
+    }
+
+    const anchor = $t.attr('href')
 
     if ($(anchor).css('display') !== 'none') {
       $('html, body')
         .stop()
         .animate(
           {
-            scrollTop: $(anchor).offset().top - fixedOffset,
+            scrollTop: $(anchor).offset().top,
           },
           600
         )
     }
   })
 }
+
+animateScrollWhileClickToAnchor()
 
 export const renderSpinner = (target) => {
   target.append(`<div class="spinner spinner--data js-spinner"></div>`)
@@ -55,12 +63,6 @@ export const deleteSpinner = () => {
 
 export const morph = (int, array) => {
   return array && array[int % 100 > 4 && int % 100 < 20 ? 2 : [2, 0, 1, 1, 1, 2][int % 10 < 5 ? int % 10 : 5]]
-}
-
-export const closeLocalMenu = () => {
-  $LOCAL_MENU.removeClass(SHOW_CLASS)
-  $TOPLINE.removeClass(LOCAL_SITE_MENU_CLASS)
-  closeAllSubMenu()
 }
 
 export const addQueryParamsToUrl = (param, date, url) => {

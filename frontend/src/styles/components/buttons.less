@@ -10,6 +10,7 @@
   .f-center(8);
   .radius(8);
   .fs20-24();
+  .NotoSans();
   display: inline-flex;
   background-clip: unset;
   background-color: transparent;
@@ -114,6 +115,10 @@
         width: 100%;
       }
     }
+
+    .svg-shell {
+      color: @turqs-main;
+    }
   }
 
   &--tertiary-orange {
@@ -159,6 +164,15 @@
   &--primary-text-big,
   &--secondary-text-big {
     .fs20-24();
+  }
+
+  &--primary-text-small,
+  &--secondary-text-small {
+    .fs14-16();
+
+    .submenu__box-link& {
+      .fs12-16(400);
+    }
   }
 
   &--primary-text-big,

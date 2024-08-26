@@ -1,11 +1,20 @@
 @import "descriptions";
 
 .squares {
-  margin-block: auto -72px;
+  column-gap: @offset32;
+  grid-template-areas: 'square .'
+                       'shadow .';
+  margin-top: auto;
   position: relative;
+
+  @media @tablet {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
 
   &__block-shell {
     .radius();
+    grid-area: square;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
     box-shadow: 0 10px 10px -5px #8093BA2E, 0 20px 25px -5px #8093BA2E;
     padding: @offset16;
@@ -17,19 +26,35 @@
     border: 1px dashed @turqs-main;
     background-color: @white80;
     padding: @offset32;
+
+    @media @tablet {
+      padding: @offset24;
+    }
+
+    @media @l-mobile {
+      padding: @offset16;
+    }
   }
 
   &__block-title {
     color: @black;
   }
 
-  &__block-sutitle {
+  &__block-subtitle {
     color: @neutral600;
+
+    @media @tablet {
+      .fs14-16(400);
+    }
   }
 
   &__square {
     .radius(2);
     position: absolute;
+
+    @media @tablet {
+      display: none;
+    }
 
     &--1 {
       .width-height(64, 50);
@@ -44,26 +69,38 @@
     }
 
     &--3 {
-      .square(96);
-      left: -7dvw;
-      bottom: 112px;
+      .square(64);
+      right: 20dvw;
+      bottom: 215px;
     }
 
     &--4 {
-      .square(96);
-      left: -7dvw;
-      bottom: 112px;
+      .square(84);
+      right: 9.5dvw;
+      bottom: 30px;
     }
 
     &--5 {
-      .square(96);
-      left: -7dvw;
-      bottom: 112px;
+      .square(84);
+      right: 3.9dvw;
+      bottom: 165px;
     }
 
     &--6 {
-      .square(96);
-      left: -7dvw;
+      .square(52);
+      right: 0;
+      bottom: 302px;
+    }
+
+    &--6 {
+      .square(52);
+      right: 0;
+      bottom: 302px;
+    }
+
+    &--7 {
+      .square(144);
+      right: -20.2dvw;
       bottom: 112px;
     }
 
@@ -72,8 +109,28 @@
       border: 1px solid @white;
     }
 
+    &--green {
+      border: 1px solid @turqs-main;
+    }
+
     &--dashed {
       border: 1px dashed @white;
+    }
+  }
+
+  &__shadow {
+    grid-area: shadow;
+    width: 100%;
+    background-color: transparent;
+    height: 36px;
+  }
+
+  &__btn {
+    width: max-content;
+    padding: @offset16 42px;
+
+    @media @tablet {
+      padding: @offset8 @offset16;
     }
   }
 }

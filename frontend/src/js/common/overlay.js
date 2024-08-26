@@ -8,8 +8,7 @@ import {
   SHOW_CLASS,
   YA_POPUP_CLASS,
 } from '../lib/constants'
-import { closeLocalMenu, isEscPressed } from '../lib/utils'
-import { isToplineScroll } from './topline'
+import { isEscPressed } from '../lib/utils'
 
 export const closeOverlay = () => {
   const $overlay = $('.js-overlay')
@@ -29,7 +28,6 @@ export function overlaysFunctions() {
       $BODY.addClass(BODY_LOCK_CLASS)
       $TOPLINE.addClass(BORDER_BOTTOM_CLASS)
     } else {
-      isToplineScroll()
       $BODY.removeClass(BODY_LOCK_CLASS)
       $TOPLINE.removeClass(BORDER_BOTTOM_CLASS).removeClass(DIRECTIONS_MENU_CLASS)
     }
@@ -39,8 +37,6 @@ export function overlaysFunctions() {
     $BTNS.on('click', function (event) {
       const $btn = $(this)
       const $overlayVal = $btn.attr('data-overlay')
-
-      closeLocalMenu()
 
       $overlay.addClass(SHOW_CLASS)
       $overlayItems.removeClass(SHOW_CLASS)

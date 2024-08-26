@@ -1,5 +1,5 @@
 //arrows
-require('../../assets/sprite/common/arrows/arrow-right.svg')
+require('../../assets/sprite/common/arrows/arrow-btn-long.svg')
 require('../../assets/sprite/common/arrows/arrow-btn-square.svg')
 require('../../assets/sprite/common/arrows/arrow-down.svg')
 require('../../assets/sprite/common/arrows/arrow-right.svg')
@@ -8,11 +8,13 @@ require('../../assets/sprite/common/arrows/arrow-right-white.svg')
 //logo
 require('../../assets/sprite/common/logo/espinoza.svg')
 require('../../assets/sprite/common/logo/my-home.svg')
+require('../../assets/sprite/common/logo/my-home-only-logo.svg')
 require('../../assets/sprite/common/logo/only-logo.svg')
 
 //social
 require('../../assets/sprite/common/social/tg.svg')
 require('../../assets/sprite/common/social/vk.svg')
+require('../../assets/sprite/common/social/vk-white.svg')
 require('../../assets/sprite/common/social/youtube.svg')
 
 //topline-elements

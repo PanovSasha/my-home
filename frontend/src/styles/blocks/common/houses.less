@@ -17,11 +17,21 @@
   &__card {
     .radius();
     .f-column();
+    .transition(border);
+    .transition(scale);
     border: 1px solid @blue10;
     padding: @offset16;
 
     @media @l-mobile {
       min-width: 81%;
+    }
+
+    &:hover {
+      @media @large-than-tablet {
+        .shadow-xl();
+        scale: 1.01;
+        border: 1px solid @blue60;
+      }
     }
   }
 

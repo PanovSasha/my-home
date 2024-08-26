@@ -11,12 +11,22 @@
 
   &__card {
     .f-column();
+    .radius(8);
+    .transition(scale);
     aspect-ratio: 383/336;
     position: relative;
+    overflow: hidden;
     padding: @offset24 @offset28;
 
     @media @l-mobile {
       aspect-ratio: 336/128;
+    }
+
+    &:hover {
+      @media @large-than-tablet {
+        .shadow-2xl();
+        scale: 1.01;
+      }
     }
   }
 

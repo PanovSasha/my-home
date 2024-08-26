@@ -5,18 +5,28 @@
 
   &--main-page {
     .f-column();
-    min-height: 560px;
-  }
+    min-height: 663px;
+    overflow: hidden;
 
-  &--sun-light {
-    animation: sun-light 9s infinite ease-in-out;
+    @media @tablet {
+      min-height: 448px;
+    }
   }
 
   &__bg-shell {
     position: absolute;
-    inset: 0;
+    width: 100%;
+    height: calc(100% - 104px);
     z-index: -1;
     overflow: hidden;
+
+    @media @tablet {
+      height: calc(100% - 210px);
+    }
+
+    &--sun-light {
+      animation: sun-light 10s infinite ease-in-out;
+    }
   }
 
   &__bg-img {
@@ -31,7 +41,7 @@
   }
 
   50% {
-    filter: brightness(160%);
+    filter: brightness(150%);
   }
 
   90% {
