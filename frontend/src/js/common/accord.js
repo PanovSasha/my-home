@@ -1,16 +1,20 @@
-import { ACTIVE_CLASS } from "../lib/constants";
+import { ACTIVE_CLASS, SHOW_CLASS } from '../lib/constants'
 
-const $btns = $(".js-accord-btn");
+const $btns = $('.js-accord-btn')
 
 const toggleShowAccordionBody = () => {
-  $btns.on("click", function () {
-    const $btn = $(this);
-    const $accordionContainer = $btn.parent(".js-accord");
+  $btns.on('click', function () {
+    const $btn = $(this)
+    const $accordionContainer = $btn.parent('.js-accord')
 
-    $accordionContainer.toggleClass(ACTIVE_CLASS);
-  });
-};
+    if ($accordionContainer.hasClass(SHOW_CLASS)) {
+      $accordionContainer.removeClass(SHOW_CLASS)
+    } else {
+      $accordionContainer.toggleClass(ACTIVE_CLASS)
+    }
+  })
+}
 
 export const accordFunctions = () => {
-  toggleShowAccordionBody();
-};
+  toggleShowAccordionBody()
+}

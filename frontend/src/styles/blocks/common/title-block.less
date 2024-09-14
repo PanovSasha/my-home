@@ -1,0 +1,29 @@
+@import "descriptions";
+
+.title-block {
+  .radius(8);
+  .shadow-xl();
+  .full-width-tablet();
+  background: @white;
+  margin-top: -@offset40;
+  padding: @offset24;
+
+  @media @tablet {
+    .radius(0);
+    border-bottom: 1px solid @blue5
+  }
+
+  &__title {
+    .Montserrat();
+    margin-bottom: @offset16;
+  }
+
+  &__subtitle {
+    color: @neutral600;
+    letter-spacing: 0.12px;
+  }
+
+  &__subtitle-link-icon {
+    color: @turqs-main;
+  }
+}

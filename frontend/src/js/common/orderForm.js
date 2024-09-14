@@ -51,8 +51,6 @@ export const orderFormFns = () => {
       $inputs.on('input', function () {
         const $t = $(this)
 
-        console.log('hui')
-
         const $tPlaceholder = $t.parent().find('.js-order-form-input-placeholder')
         if ($t.val().trim() === '') {
           $tPlaceholder.show()

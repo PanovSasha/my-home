@@ -11,6 +11,16 @@ const CopyPlugin = require('copy-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
 
+const optimization = () => {
+  const config = {}
+
+  if (isProd) {
+    config.minimizer = [new miniCssExtractPlugin(), new TerserWebpackPlugin()]
+  }
+
+  return config
+}
+
 const fileLoaderConfig = (ext) => [
   {
     loader: 'file-loader',
@@ -93,6 +103,7 @@ module.exports = {
     ],
   },
   devtool: isDev ? 'source-map' : false,
+  optimization: optimization(),
   plugins: [
     new SpritePlugin(),
     new ProvidePlugin({
@@ -236,6 +247,11 @@ if (isDev) {
     historyApiFallback: true,
     proxy: {
       '/api': {
+        target: 'http://moidom.xyz',
+        secure: false,
+        changeOrigin: true,
+      },
+      '/upload': {
         target: 'http://moidom.xyz',
         secure: false,
         changeOrigin: true,

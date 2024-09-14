@@ -1,0 +1,49 @@
+@import "descriptions";
+
+.breadcrumbs {
+  display: flex;
+  gap: 3px;
+  padding-left: 14px;
+
+  &__item {
+    .fs12-16(400);
+    .arrow-right(unset, 6px, @width:6, @height:6, 1, @turqs-main);
+    color: @neutral400;
+    position: relative;
+    padding: @offset8 26px @offset8 @offset8;
+
+    &:first-child {
+      margin-left: 2px;
+    }
+
+    &:last-child {
+      pointer-events: none;
+      padding: @offset8;
+
+      &::after {
+        content: unset;
+      }
+    }
+
+    & a {
+      position: relative;
+
+      &::after {
+        .absX-alignment();
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: @neutral400;
+      }
+    }
+
+    &:last-child {
+      a {
+        &::after {
+          content: unset;
+        }
+      }
+    }
+  }
+}

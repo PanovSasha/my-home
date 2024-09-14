@@ -1,11 +1,10 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx", "sonarjs"],
+  "plugins": ["@nrwl/nx"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "extends": ["plugin:sonarjs/recommended"],
       "rules": {
         "no-console": "error",
         "no-alert": "error",

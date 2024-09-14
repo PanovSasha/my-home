@@ -40,8 +40,57 @@
     margin-bottom: 9px;
   }
 
+  &__card-props {
+    .f-column(8);
+    align-items: start;
+    position: absolute;
+    left: @offset8;
+    bottom: @offset8;
+  }
+
+  &__card-prop {
+    .radius(16);
+    background-color: @white;
+    padding: @offset4 @offset8;
+
+    @media @l-tablet {
+      padding-block: 0;
+    }
+  }
+
+  &__card-title-shell {
+    .f-between(24);
+    margin-bottom: @offset8;
+  }
+
   &__card-title {
     margin-bottom: @offset8;
+
+    .houses__card-title-shell & {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-title-types {
+    .f-column(4);
+    align-items: end;
+  }
+
+  &__card-title-types {
+    .fs14-16(400);
+    .radius(4);
+    background: @neutral100;
+    color: @blue60;
+    padding: @offset4 @offset8;
+  }
+
+  &__card-data {
+    color: @neutral500;
+    margin-bottom: @offset8;
+
+    @media @tablet {
+      .fs12-16(400);
+    }
   }
 
   &__card-tags {

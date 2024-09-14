@@ -22,12 +22,18 @@
     @media @tablet {
       gap: @offset16;
     }
+
+    .topline__nav-item--with-local-submenu & {
+      @media @large-than-tablet {
+        width: 100%;
+      }
+    }
   }
 
   &__box-title {
     .fs12-16(400);
     color: @neutral400;
-    padding-block: @offset8;
+    padding: @offset8 @offset16;
 
     @media @tablet {
       display: none;
@@ -35,14 +41,28 @@
   }
 
   &__box-link {
-    width: max-content;
+    .radius(6);
+    width: 100%;
     justify-content: start;
     text-decoration: underline;
-    padding-block: @offset8;
+    padding: @offset8 @offset16;
 
     @media @tablet {
+      width: max-content;
       color: @neutral350;
-      padding-block: 0;
+      padding: 0;
+    }
+
+    &:hover {
+      @media @large-than-tablet {
+        background-color: @blue5;
+      }
+    }
+
+    .topline__nav-item--with-local-submenu & {
+      @media @large-than-tablet {
+        width: 100%;
+      }
     }
   }
 
