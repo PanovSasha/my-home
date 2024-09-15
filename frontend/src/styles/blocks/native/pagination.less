@@ -90,6 +90,11 @@
     color: transparent !important;
     background: url('../../../assets/svg/pagination-arrow/arrow-left-pag.svg') center center / 20px 20px no-repeat !important;
     padding: 0;
+
+    @media @l-mobile {
+      .width-height(26, 26) !important;
+      min-width: 26px !important;
+    }
   }
 }
 
@@ -116,6 +121,11 @@
     border-color: transparent !important;
     background: url('../../../assets/svg/pagination-arrow/arrow-right-pag.svg') center center / 20px 20px no-repeat !important;
     padding: 0;
+
+    @media @l-mobile {
+      .width-height(26, 26) !important;
+      min-width: 26px !important;
+    }
   }
 }
 
@@ -141,6 +151,11 @@
     @media @tablet {
       min-width: 32px !important;
       height: 32px !important;
+    }
+
+    @media @l-mobile {
+      min-width: 26px !important;
+      height: 26px !important;
     }
   }
 

@@ -1,7 +1,38 @@
 @import "descriptions";
 
 .content {
-  h1, h2, h3, h4, h5, h6, p, ul, ol {
+  h1, h2, h3, h4, h5, h6 {
+    .Montserrat();
+    color: @blue-darker;
+    margin-top: @offset40;
+
+    @media @tablet {
+      margin-top: @offset32;
+    }
+
+    @media @l-mobile {
+      margin-top: @offset24;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h4, h5, h6, p, ul, ol {
+    margin-top: @offset24;
+
+    @media @tablet {
+      margin-top: @offset20;
+    }
+
+    @media @l-mobile {
+      margin-top: @offset16;
+    }
+  }
+
+  p, ul, ol {
+    color: @neutral500;
   }
 
   h1 {
@@ -48,6 +79,47 @@
     }
   }
 
-  p {
+  ul {
+    li {
+      display: block;
+      padding-left: @offset24;
+      position: relative;
+      margin-bottom: @offset8;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        .circle(3);
+        transform: translateY(12px);
+        content: '';
+        position: absolute;
+        left: @offset10;
+        background-color: @neutral500;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list;
+
+    li {
+      display: block;
+      padding-left: @offset24;
+      position: relative;
+      margin-bottom: @offset8;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        counter-increment: list;
+        content: counter(list) '.';
+        position: absolute;
+        left: 0;
+      }
+    }
   }
 }

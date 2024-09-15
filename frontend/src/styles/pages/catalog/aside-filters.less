@@ -7,14 +7,20 @@
     .f-column();
     background-color: @white;
     position: absolute;
-    width: 100%;
+    //width: 100%;
     top: 0;
     left: 0;
     transform: translateX(-100%);
     z-index: 1;
     height: 100%;
-    overflow: auto;
     padding: @offset16 @tablet-padding 0 @offset48;
+  }
+
+  .catalog.open & {
+    position: relative;
+    //height: max-content;
+    //max-height: 100dvh;
+    //overflow: auto;
   }
 
   @media @l-mobile {
@@ -85,6 +91,10 @@
     width: max-content;
     flex: 0 1;
     position: relative;
+
+    @media @tablet {
+      width: 100%;
+    }
   }
 
   &__block-input-sign {
@@ -308,9 +318,9 @@
       z-index: 2;
 
       @media @tablet {
-        position: relative;
-        top: unset;
-        bottom: unset;
+        top: calc(100dvh - 650px);
+        position: sticky;
+        bottom: @offset16;
       }
     }
   }
