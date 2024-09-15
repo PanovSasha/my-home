@@ -9,6 +9,7 @@ import { counterUpFigures } from './counterUpFigures'
 import { buttonsFns } from './buttons'
 import { animateSvg } from './animateSvg'
 import { orderFormFns } from './orderForm'
+import { spoilerFns } from './spoiler'
 
 export const commonFunctions = () => {
   accordFunctions()
@@ -19,6 +20,7 @@ export const commonFunctions = () => {
   overlaysFunctions()
   paginationFns()
   selectFunctions()
+  spoilerFns()
   swiperFunctions()
   topLineFunctions()
   orderFormFns()
