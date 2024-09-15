@@ -463,9 +463,11 @@ export const catalogFns = (data) => {
         headers: {
           'Api-Key': 'tUKdAP2Gmv/?VyvCI16rAB=UN7yFpQvirTa5Ix21BzP4w6lFfqrSoySJfKVhXCpH',
         },
-        data: '',
+        data: data,
         processData: true,
         success: (data) => {
+          console.log(data, 'data')
+
           scrollToTopCatalog()
 
           const { countRecord, endList, items, pageCount, pageSize } = data.data
