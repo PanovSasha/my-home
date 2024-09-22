@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="44" height="44" rx="1" stroke="currentColor"
+        stroke-width="2"/>
+  <path
+    d="M54 10 10 54M43 10 10 43M54 21 21 54M54 32 32 54M54 43 43 54M32 10 10 32M22 10 10 22"
+    stroke="currentColor" stroke-width="2"/>
+</svg>

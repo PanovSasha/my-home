@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M7 42L7 32C7 30.8954 7.89543 30 9 30L11 30C12.1046 30 13 30.8954 13 32L13 37C13 37.5523 13.4477 38 14 38L50 38C50.5523 38 51 37.5523 51 37L51 32C51 30.8954 51.8954 30 53 30L55 30C56.1046 30 57 30.8954 57 32L57 42C57 43.1046 56.1046 44 55 44L9 44C7.89543 44 7 43.1046 7 42Z"
+    stroke="currentColor" stroke-width="2"/>
+  <path
+    d="M29 7L30.276 10.6862C31.3596 13.8167 30.8857 17.2763 29 20V20C27.1143 22.7237 26.6404 26.1833 27.724 29.3139L29 33"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path
+    d="M36 7L37.276 10.6862C38.3596 13.8167 37.8857 17.2763 36 20V20C34.1143 22.7237 33.6404 26.1833 34.724 29.3139L36 33"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path
+    d="M43 7L44.276 10.6862C45.3596 13.8167 44.8857 17.2763 43 20V20C41.1143 22.7237 40.6404 26.1833 41.724 29.3139L43 33"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path
+    d="M22 7L23.276 10.6862C24.3596 13.8167 23.8857 17.2763 22 20V20C20.1143 22.7237 19.6404 26.1833 20.724 29.3139L22 33"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 47V61M25 54H39M37.25 48.75L26.75 59.25M26.75 48.75L37.25 59.25"
+        stroke="currentColor" stroke-width="2"/>
+</svg>

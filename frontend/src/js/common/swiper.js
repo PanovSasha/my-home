@@ -1,209 +1,115 @@
 import Swiper from 'swiper/bundle'
-import { $WINDOW, TABLET_WIDTH } from '../lib/constants'
-import { runFnByWinResize } from '../lib/utils'
+import { SHOW_CLASS } from '../lib/constants'
 
 export const swiperFunctions = () => {
-  const switchOnOffSlider = (slider) => {
-    if ($WINDOW.width() <= TABLET_WIDTH) {
-      slider.disable()
-    } else {
-      slider.enable()
-    }
-  }
+  const ACTIVE_SLIDER_CLASS = 'active-slide'
 
-  const topSliderFns = () => {
-    const topProjects = new Swiper('.js-top-projects', {
-      slidesPerView: 1,
-      speed: 1200,
+  const housesSliderFns = () => {
+    const housesSlider = new Swiper('.js-houses-slider', {
+      // slidesPerView: 3,
+      // spaceBetween: 2,
+
       breakpoints: {
-        1: {
-          pagination: {
-            el: '.js-top-slider-pagination',
-            clickable: true,
-          },
-        },
-        1024: {
-          pagination: {
-            el: '.js-top-slider-nav-fraction',
-            type: 'fraction',
-          },
-        },
-      },
-
-      navigation: {
-        prevEl: '.js-top-slider-nav-btn-prev',
-        nextEl: '.js-top-slider-nav-btn-next',
-      },
-    })
-
-    const setButtonsLeftOffset = () => {
-      const $nav = $('.js-top-slider-nav')
-
-      if ($nav.length && $WINDOW.width() > TABLET_WIDTH) {
-        const $anchor = $('.swiper-slide-active .js-top-slider-slide-info-img-shell')
-
-        $nav.css('left', `${$anchor.outerWidth() + 40}px`)
-      }
-    }
-
-    setButtonsLeftOffset()
-
-    $WINDOW.on('resize', function () {
-      setButtonsLeftOffset()
-    })
-  }
-
-  const objectsSliderFns = () => {
-    const objectsSlider = new Swiper('.js-objects-slider', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 2,
-        },
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 2,
-        },
-      },
-      speed: 1200,
-      pagination: {
-        el: '.js-objects-slider-nav-fraction',
-        type: 'fraction',
-      },
-
-      navigation: {
-        prevEl: '.js-objects-slider-nav-btn-prev',
-        nextEl: '.js-objects-slider-nav-btn-next',
-      },
-    })
-
-    switchOnOffSlider(objectsSlider)
-    runFnByWinResize(() => {
-      switchOnOffSlider(objectsSlider)
-    })
-  }
-
-  const mediaSliderFns = () => {
-    const mediaSlider = new Swiper('.js-media-slider', {
-      slidesPerView: 'auto',
-      spaceBetween: 2,
-      breakpoints: {
-        640: {
-          spaceBetween: 2,
-        },
-        1024: {
-          spaceBetween: 2,
-        },
-      },
-      speed: 1200,
-      pagination: {
-        el: '.js-media-slider-nav-fraction',
-        type: 'fraction',
-      },
-
-      navigation: {
-        prevEl: '.js-media-slider-nav-btn-prev',
-        nextEl: '.js-media-slider-nav-btn-next',
-      },
-    })
-  }
-
-  const projectsSliderFns = () => {
-    const projectSlider = new Swiper('.js-pro-slider', {
-      breakpoints: {
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 2,
-        },
+        // 1024: {
+        //   slidesPerView: 3,
+        //   spaceBetween: 2,
+        // },
 
         1280: {
-          slidesPerView: 4,
-          spaceBetween: 2,
+          slidesPerView: 3,
+          spaceBetween: 32,
         },
       },
-      speed: 1200,
-      pagination: {
-        el: '.js-pro-nav-fraction',
-        type: 'fraction',
-      },
+      speed: 500,
+      // pagination: {
+      //   el: '.js-pro-nav-fraction',
+      //   type: 'fraction',
+      // },
+      //
+      // navigation: {
+      //   prevEl: '.js-pro-nav-btn-prev',
+      //   nextEl: '.js-pro-nav-btn-next',
+      // },
+    })
+  }
 
+  const detailSliderFns = () => {
+    const copyPreviewImgToThumbsSlides = () => {
+      const $slideImages = $('.js-swiper-slide')
+      const $thumbsWrapper = $('.js-detail-sls-thumbs-wrapper')
+      const $thumbsContainer = $('.detail-sls__thumbs-container')
+
+      if ($slideImages.length && $slideImages.length > 1) {
+        $thumbsContainer.addClass(SHOW_CLASS)
+
+        $.each($slideImages, function (i, el) {
+          const $slide = $(el)
+          const thumbsSlide = $slide
+            .clone()
+            .removeClass()
+            .addClass('swiper-slide detail-sls-thumbs__slide' + ' js-detail-sls-thumbs-slide')
+
+          if (i === 0) {
+            thumbsSlide.addClass('swiper-slide-thumb-active')
+          }
+
+          const thumbsSlideImg = thumbsSlide.find('img').removeClass().addClass('detail-sls-thumbs__slide-img')
+
+          thumbsSlide.html(`<div class="detail-sls-thumbs__slide-img-container">${thumbsSlideImg[0].outerHTML}</div>`)
+          $thumbsWrapper.append(thumbsSlide)
+        })
+      } else {
+        $thumbsContainer.hide()
+      }
+    }
+
+    copyPreviewImgToThumbsSlides()
+
+    const bimDThumbs = new Swiper('.js-detail-sls-thumbs', {
+      spaceBetween: 8,
+      slidesPerView: 8,
+    })
+
+    const bimDPreview = new Swiper('.js-detail-sls-preview', {
+      pagination: {
+        el: '.js-detail-sls-preview-pagination',
+        clickable: true,
+      },
       navigation: {
-        prevEl: '.js-pro-nav-btn-prev',
-        nextEl: '.js-pro-nav-btn-next',
+        prevEl: '.js-detail-sls-thumbs-btn-prev',
+        nextEl: '.js-detail-sls-thumbs-btn-next',
+      },
+      thumbs: {
+        swiper: bimDThumbs,
       },
     })
 
-    const showMoreSlidesByMoreBtnPress = () => {
-      let clickCount = 1
+    const fixChangeHeaderSliderThumbs = () => {
+      const $THUMBS = $('.js-boiler-sls-thumbs-slide')
 
-      const checkHiddenSlides = function () {
-        clickCount++
+      $THUMBS.on('click', function () {
+        const $t = $(this)
 
-        $.each($slides, function (i, el) {
-          const $el = $(el)
+        if (!$t.hasClass(ACTIVE_SLIDER_CLASS)) {
+          $.each($THUMBS, (i, el) => {
+            if (this === el) {
+              bimDThumbs.slideTo(i)
+              bimDThumbs.allowSlideNext = true
 
-          if (i >= 4 * clickCount) {
-            $el.hide()
-          } else {
-            $el.show()
-          }
-        })
+              bimDPreview.slideTo(i)
+              bimDPreview.allowSlideNext = true
 
-        if (4 * clickCount >= $slides.length) {
-          $moreBtn.hide()
+              $THUMBS.removeClass(ACTIVE_SLIDER_CLASS)
+              $t.addClass(ACTIVE_SLIDER_CLASS)
+            }
+          })
         }
-
-        return clickCount
-      }
-
-      const $proShell = $('.js-pro')
-      const $moreBtn = $proShell.find('.js-pro-btn-more')
-      const $slides = $proShell.find('.js-pro-slide')
-
-      $moreBtn.on('click', function () {
-        checkHiddenSlides(clickCount)
       })
     }
 
-    switchOnOffSlider(projectSlider)
-    runFnByWinResize(() => {
-      switchOnOffSlider(projectSlider)
-    })
-
-    showMoreSlidesByMoreBtnPress()
+    fixChangeHeaderSliderThumbs()
   }
 
-  const teamSliderFns = () => {
-    const teamSlider = new Swiper('.js-team-slider', {
-      breakpoints: {
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 2,
-        },
-      },
-      speed: 1200,
-      pagination: {
-        el: '.js-team-nav-fraction',
-        type: 'fraction',
-      },
-
-      navigation: {
-        prevEl: '.js-team-nav-btn-prev',
-        nextEl: '.js-team-nav-btn-next',
-      },
-    })
-
-    switchOnOffSlider(teamSlider)
-    runFnByWinResize(() => {
-      switchOnOffSlider(teamSlider)
-    })
-  }
-
-  topSliderFns()
-  objectsSliderFns()
-  mediaSliderFns()
-  projectsSliderFns()
-  teamSliderFns()
+  detailSliderFns()
+  housesSliderFns()
 }
