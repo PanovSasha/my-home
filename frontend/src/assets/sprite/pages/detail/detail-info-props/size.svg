@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M27 24V5H8" stroke="currentColor"/>
+  <path
+    d="M12 27L5.00001 27L5.00001 20M12 27L12 5L5.00001 5L5.00001 20M12 27L15 27M5.00001 20L27 20L27 27L24 27M15 27L15 23M15 27L18 27M18 27L18 23M18 27L21 27M21 27L21 23M21 27L24 27M24 27L24 23"
+    stroke="currentColor"/>
+</svg>

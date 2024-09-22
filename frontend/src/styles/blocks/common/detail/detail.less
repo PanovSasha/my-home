@@ -1,0 +1,36 @@
+@import "descriptions";
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 384px;
+  align-items: start;
+  column-gap: @offset32;
+  padding-top: @offset64;
+
+  @media @l-tablet {
+    .f-column();
+  }
+
+  @media @tablet {
+    padding-top: @offset40;
+  }
+
+  @media @l-mobile {
+    padding-top: @offset24;
+  }
+
+  &__sls {
+    position: sticky;
+    top: 120px;
+
+    @media @l-tablet {
+      margin-inline: auto;
+    }
+  }
+
+  &__sls-shell {
+    min-width: 0;
+    position: sticky;
+    top: @offset24;
+  }
+}

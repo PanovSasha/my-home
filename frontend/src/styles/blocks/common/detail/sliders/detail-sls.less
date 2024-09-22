@@ -1,0 +1,31 @@
+@import "descriptions";
+
+.detail-sls {
+  .radius(20);
+  //background-color: @gray-bg;
+  align-self: start;
+  //padding: @offset32;
+
+  @media @l-tablet {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: @offset40;
+    width: 100%;
+  }
+
+  @media @l-mobile {
+    margin: 0 0 @offset32;
+  }
+
+  &__thumbs-container {
+    .f-between(@offset16);
+    display: none;
+
+    .show& {
+      @media @large-than-l-tablet {
+        .smooth-show();
+        display: flex;
+      }
+    }
+  }
+}

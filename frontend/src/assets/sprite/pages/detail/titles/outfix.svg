@@ -1,0 +1,5 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M13 18v37a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V18M10.5 57h43M43 57V44m-8 13V44m-8 13V45a1 1 0 0 1 1-1h10m13 0H38M19 57V25a1 1 0 0 1 1-1h17a1 1 0 0 1 1 1v19m-4-5h-2M56 18v37a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V18M7 12h50M7 12v5a1 1 0 0 0 1 1h48a1 1 0 0 0 1-1v-5M7 12l5.707-5.707A1 1 0 0 1 13.414 6h37.172a1 1 0 0 1 .707.293L57 12"
+    stroke="currentColor" stroke-width="2"/>
+</svg>
