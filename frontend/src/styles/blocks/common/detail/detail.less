@@ -8,7 +8,8 @@
   padding-top: @offset64;
 
   @media @l-tablet {
-    .f-column();
+    grid-template-columns: 1fr;
+    padding-top: @offset32;
   }
 
   @media @tablet {
@@ -24,13 +25,18 @@
     top: 120px;
 
     @media @l-tablet {
-      margin-inline: auto;
+      position: static;
     }
   }
 
   &__sls-shell {
+    .full-width-tablet();
     min-width: 0;
     position: sticky;
     top: @offset24;
+
+    @media @l-tablet {
+      position: static;
+    }
   }
 }

@@ -21,6 +21,10 @@
   &__title {
     padding-inline: @offset16;
     margin-bottom: @offset24;
+
+    @media @tablet {
+      margin-bottom: @offset20;
+    }
   }
 
   &__props {
@@ -85,46 +89,24 @@
   &__banks-link {
     flex: none;
     width: calc((100% - 2 * @offset16) / 3);
+
+    @media @l-tablet {
+      width: calc((100% - 3 * @offset16) / 4);
+    }
+
+    @media @tablet {
+      width: calc((100% - 2 * @offset16) / 3);
+    }
+
+    @media @l-mobile {
+      width: calc((100% - @offset16) / 2);
+    }
   }
 
   &__banks-img {
   }
 
-  &__order {
-  }
-
-  &__order-form {
-    display: none;
-
-    .show& {
-      .f-column(24);
-      animation: showBySlide 0.1s forwards;
-    }
-  }
-
   &__order-show-form-btn {
     width: 100%;
-  }
-
-  &__order-form-submit-btn {
-  }
-
-  &__order-form-title {
-    border-top: @offset8;
-
-    &:first-child {
-      padding-block: @offset8;
-    }
-  }
-
-  &__order-form-block {
-    .f-column(8);
-
-    &--with-mark {
-      gap: 0;
-    }
-  }
-
-  &__order-success {
   }
 }

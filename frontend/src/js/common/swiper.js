@@ -6,14 +6,20 @@ export const swiperFunctions = () => {
 
   const housesSliderFns = () => {
     const housesSlider = new Swiper('.js-houses-slider', {
-      // slidesPerView: 3,
-      // spaceBetween: 2,
-
+      slidesPerView: 1.2,
+      spaceBetween: 8,
+      freeMode: true,
+      mousewheelControl: true,
       breakpoints: {
-        // 1024: {
-        //   slidesPerView: 3,
-        //   spaceBetween: 2,
-        // },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+          mousewheelControl: true,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
 
         1280: {
           slidesPerView: 3,
@@ -21,15 +27,10 @@ export const swiperFunctions = () => {
         },
       },
       speed: 500,
-      // pagination: {
-      //   el: '.js-pro-nav-fraction',
-      //   type: 'fraction',
-      // },
-      //
-      // navigation: {
-      //   prevEl: '.js-pro-nav-btn-prev',
-      //   nextEl: '.js-pro-nav-btn-next',
-      // },
+      navigation: {
+        prevEl: '.js-houses-slider-nav-btn-prev',
+        nextEl: '.js-houses-slider-nav-btn-next',
+      },
     })
   }
 
@@ -68,6 +69,13 @@ export const swiperFunctions = () => {
     const bimDThumbs = new Swiper('.js-detail-sls-thumbs', {
       spaceBetween: 8,
       slidesPerView: 8,
+
+      breakpoints: {
+        1280: {
+          slidesPerView: 7,
+          spaceBetween: 32,
+        },
+      },
     })
 
     const bimDPreview = new Swiper('.js-detail-sls-preview', {

@@ -1,0 +1,39 @@
+@import "descriptions";
+
+.houses-slider {
+  padding: 3px;
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__nav {
+    .abs-alignment();
+    width: calc(100% + 2 * 88px);
+  }
+
+  &__nav-btns {
+    .f-between();
+
+    @media @m-desktop {
+      display: none;
+    }
+  }
+
+  &__nav-btn {
+    .square(56);
+    padding: 0;
+
+    &--prev {
+    }
+
+    &--next {
+    }
+  }
+}
+
+.houses-slider-shell {
+  position: relative;
+}
