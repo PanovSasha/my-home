@@ -1,8 +1,26 @@
 @import "descriptions";
 
 .content {
-  h1, h2, h3, h4, h5, h6 {
+  &__picture {
+    .radius(0);
+    aspect-ratio: 592/448;
+
+    &--sticky {
+      position: sticky;
+      top: @offset40;
+
+      @media @tablet {
+        top: 0;
+        position: relative;
+      }
+    }
+  }
+
+  h1, h2, h3, .h1, .h2, .h3 {
     .Montserrat();
+  }
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: @blue-darker;
     margin-top: @offset40;
 
@@ -19,11 +37,19 @@
     }
   }
 
-  .descr__title-shell h1, h2, h3, h4, h5, h6 {
+  .descr__title-shell {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      margin-top: 0;
+    }
+  }
+
+  p strong {
+    display: inline;
     margin-top: 0;
   }
 
-  h4, h5, h6, p, ul, ol {
+  h4, h5, h6, .h4, .h5, .h6, p, ul, ol, strong {
+    display: block;
     margin-top: @offset24;
 
     @media @tablet {
@@ -39,7 +65,7 @@
     color: @neutral500;
   }
 
-  h1 {
+  h1, .h1 {
     .fs56-64();
 
     @media @tablet {
@@ -47,7 +73,7 @@
     }
   }
 
-  h2 {
+  h2, .h2 {
     .fs40-48();
 
     @media @tablet {
@@ -55,7 +81,7 @@
     }
   }
 
-  h3 {
+  h3, .h3 {
     .fs32-32();
 
     @media @tablet {
@@ -63,7 +89,7 @@
     }
   }
 
-  h4 {
+  h4, .h4 {
     .fs24-32();
 
     @media @tablet {
@@ -71,7 +97,7 @@
     }
   }
 
-  h5 {
+  h5, .h5 {
     .fs20-24();
 
     @media @tablet {
@@ -79,7 +105,7 @@
     }
   }
 
-  h6 {
+  h6, .h6 {
     .fs16-24();
 
     @media @tablet {
@@ -110,7 +136,7 @@
   }
 
   ol {
-    counter-reset: list;
+    //counter-reset: list;
 
     li {
       display: block;
@@ -122,12 +148,30 @@
         margin-bottom: 0;
       }
 
-      &::before {
-        counter-increment: list;
-        content: counter(list) '.';
-        position: absolute;
-        left: 0;
-      }
+      //&::before {
+      //  counter-increment: list;
+      //  content: counter(list) '.';
+      //  position: absolute;
+      //  left: 0;
+      //}
     }
+  }
+
+  .title-block__content& {
+    * {
+      color: @white;
+    }
+
+    li::before {
+      background-color: @white;
+    }
+  }
+
+  & .main-blue {
+    color: @blue-main;
+  }
+
+  & .neutral {
+    color: @neutral500;
   }
 }

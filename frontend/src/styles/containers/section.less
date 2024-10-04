@@ -49,6 +49,18 @@
     }
   }
 
+  &--spec2-padding {
+    padding-block: 0 136px;
+
+    @media @tablet {
+      padding-block: 0 @offset80;
+    }
+
+    @media @l-mobile {
+      padding-block: 0 @offset40;
+    }
+  }
+
   &--border-top {
     border-top: 1px solid;
     border-image-source: linear-gradient(270deg, #FFFFFF 0%, rgba(32, 205, 194, 0.5) 50%, #FFFFFF 100%);

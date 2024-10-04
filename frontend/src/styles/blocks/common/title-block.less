@@ -4,6 +4,7 @@
   .radius(8);
   .shadow-xl();
   .full-width-tablet();
+  position: relative;
   background: @white;
   margin-top: -@offset40;
   padding: @offset24;
@@ -11,6 +12,23 @@
   @media @tablet {
     .radius(0);
     border-bottom: 1px solid @blue5
+  }
+
+  &--with-img {
+    padding: @offset40;
+  }
+
+  &__bg {
+    .abs-alignment();
+    .object-fit();
+  }
+
+  &__content {
+    .radius(8);
+    background-color: fade(@blue-main, 91%);
+    padding: @offset48;
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
@@ -25,5 +43,9 @@
 
   &__subtitle-link-icon {
     color: @turqs-main;
+  }
+
+  &__order-btn {
+    margin-top: @offset40;
   }
 }
