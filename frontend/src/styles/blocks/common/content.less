@@ -22,24 +22,31 @@
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: @blue-darker;
-    margin-top: @offset40;
+  }
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, ol, ul, strong {
+    margin-bottom: @offset40;
 
     @media @tablet {
-      margin-top: @offset32;
+      margin-bottom: @offset32;
     }
 
     @media @l-mobile {
-      margin-top: @offset24;
+      margin-bottom: @offset24;
     }
 
-    &:first-child {
-      margin-top: 0;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  .descr__title-shell {
+  .title-block__content& {
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-      margin-top: 0;
+      margin-bottom: @offset16;
+
+      @media @l-mobile {
+        margin-bottom: @offset12;
+      }
     }
   }
 
@@ -50,15 +57,21 @@
 
   h4, h5, h6, .h4, .h5, .h6, p, ul, ol, strong {
     display: block;
-    margin-top: @offset24;
+    margin-bottom: @offset24;
 
     @media @tablet {
-      margin-top: @offset20;
+      margin-bottom: @offset20;
     }
 
     @media @l-mobile {
-      margin-top: @offset16;
+      margin-bottom: @offset16;
     }
+
+
+    &.btn {
+      display: flex;
+    }
+
   }
 
   p, ul, ol {
@@ -136,7 +149,7 @@
   }
 
   ol {
-    //counter-reset: list;
+    counter-reset: list;
 
     li {
       display: block;
@@ -148,12 +161,24 @@
         margin-bottom: 0;
       }
 
-      //&::before {
-      //  counter-increment: list;
-      //  content: counter(list) '.';
-      //  position: absolute;
-      //  left: 0;
-      //}
+      &::before {
+        counter-increment: list;
+        content: counter(list) '.';
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    ul li {
+      &::before {
+        .circle(3);
+        counter-increment: none;
+        transform: translateY(12px);
+        content: '';
+        position: absolute;
+        left: @offset10;
+        background-color: @neutral500;
+      }
     }
   }
 

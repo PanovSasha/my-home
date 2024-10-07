@@ -25,10 +25,12 @@
 
   &__content {
     .radius(8);
+    .f-column();
     background-color: fade(@blue-main, 91%);
     padding: @offset48;
     position: relative;
     z-index: 1;
+    min-height: 336px;
   }
 
   &__title {
@@ -46,6 +48,12 @@
   }
 
   &__order-btn {
-    margin-top: @offset40;
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+
+    .content & {
+      margin-top: auto;
+    }
   }
 }

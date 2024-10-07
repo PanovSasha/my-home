@@ -25,6 +25,14 @@
         justify-content: center;
       }
     }
+
+    &--no-icon {
+      padding-left: 0;
+    }
+
+    .shell--flex-3-prop & {
+      width: calc((100% - @offset32 * 2) / 3);
+    }
   }
 
   &__card-icon {
@@ -46,6 +54,10 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  &__card-figure {
+
   }
 
   &__card-title {

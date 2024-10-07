@@ -17,7 +17,16 @@
     .animate {
       animation: green-fill 3s ease-in-out forwards, dash 4s ease-in-out forwards;
       stroke: @turqs-main;
+    }
+  }
 
+  &--green-no-fill {
+    fill: transparent;
+
+    .animate {
+      animation: dash 4s ease-in-out forwards;
+      stroke: @turqs-main;
+      stroke-width: 3;
     }
   }
 }
