@@ -16,6 +16,18 @@
   text-decoration: underline;
 }
 
+.underline--btn-tertiary {
+  position: relative;
+
+  &::after {
+    display: block;
+    background-color: @turqs-alt-main;
+    content: '';
+    width: 100%;
+    height: 1px;
+  }
+}
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: @blue-darker;
 
