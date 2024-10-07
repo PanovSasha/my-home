@@ -245,6 +245,30 @@
     }
   }
 
+  &--download {
+    .transition(opacity);
+    align-self: center;
+    border: 2px solid @white;
+    width: max-content;
+    margin-left: auto;
+    padding: @offset8 @offset24;
+
+    @media @tablet {
+      margin-left: 0;
+    }
+
+    @media @l-mobile {
+      .fs14-16();
+      width: 100%;
+    }
+
+    &:hover {
+      @media @large-than-tablet {
+        opacity: 0.7;
+      }
+    }
+  }
+
   .checkbox__text & {
     .fs14-16(400);
     display: inline;

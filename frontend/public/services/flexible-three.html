@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> Гибкое дерево</title>
+</head>
+
+<body class="body">
+
+<header class="header header--blue-bg js-header">
+  <div class="wrap">
+    <div class="topline js-topline">
+      <div class="topline__logo-shell">
+        <button
+          type="button"
+          title="открыть выпадающее меню"
+          class="topline__burger js-topline-burger only-tablet accessibility-link"
+        >
+          <span class="topline__burger-line"></span>
+        </button>
+        
+        <a
+          class="topline__logo-link accessibility-link"
+          href="/">
+          <svg class="topline__logo only-desktop">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#my-home"></use>
+          </svg>
+          
+          <svg class="topline__logo only-tablet">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#my-home-only-logo"></use>
+          </svg>
+        </a>
+        
+        <span class="topline__sign only-desktop">
+          Строим
+          <br>
+          честно
+        </span>
+      </div>
+      
+      <div class="topline__contact">
+        <div class="topline__contact-socials-shell">
+          <p class="topline__contact-title">
+            Присоединяйтесь к нам
+          </p>
+          
+          <div class="topline__contact-socials">
+            <a
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet topline__contact-social-icon--yt">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+            
+            <a
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon only-desktop">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#vk"></use>
+              </svg>
+              
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#vk-white"></use>
+              </svg>
+            </a>
+            
+            <a
+              class="topline__contact-social accessibility-link accessibility-link--scale"
+              href="#">
+              <svg
+                class="icon icon--24 topline__contact-social-icon topline__contact-social-icon--tablet topline__contact-social-icon--tg">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#tg"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="topline__contact-shell">
+          <div class="topline__contact-location">
+          </div>
+          
+          <div class="topline__contact-phone-shell">
+            <a
+              class="topline__contact-phone-link accessibility-link"
+              href="tel:+79052122685">
+              <svg class="icon icon--16">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#mobile"></use>
+              </svg>
+              
+              +7 905 212 2685
+            </a>
+            
+            <div class="topline__contact-mail-shell only-tablet">
+              <a
+                class="topline__contact-mail-link"
+                href="mailto:info@moidom.group">
+                info@moidom.group
+              </a>
+              
+              Отдел продаж
+            </div>
+            
+            <p class="topline__contact-phone-sign">
+              Ежедневно с&nbsp;10:00 до&nbsp;19:00
+            </p>
+            
+            <p class="topline__contact-address">
+              194000, Санкт-Петербург. посёлок
+              <br>
+              Здесьлово, Здесьское шоссе,
+              123, стр.1
+            </p>
+            
+            <p class="topline__contact-title only-tablet">
+              Контакты
+            </p>
+          </div>
+          
+          <div class="topline__contact-phone-shell only-desktop">
+            <a
+              class="topline__contact-phone-link accessibility-link"
+              href="tel:+78000000000">
+              <svg class="icon icon--16">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#phone"></use>
+              </svg>
+              
+              8 800 0000 000
+            </a>
+            
+            <p class="topline__contact-phone-sign">
+              Звонок бесплатный по&nbsp;РФ
+            </p>
+          </div>
+          
+          <div class="topline__order-btn-shell">
+            <a
+              class="btn btn--small btn--tertiary-orange js-animate-scroll topline__order-btn js-topline-order-btn"
+              href="#order">
+              Заказать звонок
+              
+              <svg class="icon icon--20">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="topline__arrow-box arrow-box">
+          <div class="arrow-box__line"></div>
+        </div>
+      </div>
+      
+      <div class="topline__nav">
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <svg class="icon icon--16">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#home"></use>
+          </svg>
+          
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="/">
+            Главная
+          </a>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="catalog.html">
+            Каталог домов
+          </a>
+          
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn"
+          >
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+          
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell shell shell--grid shell--2">
+              <div class="submenu__box-shell shell shell--grid shell--3">
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Технология
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Каркасные дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фахверковые дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Каркасные бани
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Площадь дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;100&nbsp;кв.м.
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;150&nbsp;кв.м.
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    До&nbsp;200&nbsp;кв.м.
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Стиль дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Барнхаус
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Финские дома
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Современные
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Количество этажей
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    1-этажные
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    1,5-этажные
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    2-этажные
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Размер дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    6х6
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    7х7
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    8х8
+                  </a>
+                </div>
+                
+                <div class="submenu__box">
+                  <p class="submenu__box-title">
+                    Особенности дома
+                  </p>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    С&nbsp;террасой
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Со&nbsp;вторым светом
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="catalog.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    С&nbsp;панорамными окнами
+                  </a>
+                </div>
+              </div>
+              
+              <div class="submenu__order">
+                <div class="submenu__order-picture picture">
+                  <img
+                    class="picture__img"
+                    loading="lazy" src="/assets/img/pages/main/submenu-bg.webp"
+                    alt="">
+                </div>
+                
+                <h2 class="h3 submenu__order-title">
+                  Оставьте заявку на&nbsp;консультацию
+                </h2>
+                
+                <a
+                  class="btn btn--small btn--tertiary-orange js-animate-scroll"
+                  href="#order">
+                  Заказать звонок
+                  
+                  <svg class="icon icon--20">
+                    <use
+                      xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu topline__nav-item--with-local-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text js-animate-scroll"
+            href="#houses">
+            Построенные объекты
+          </a>
+          
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn"
+          >
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+          
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell shell">
+              <div class="submenu__box-shell">
+                <div class="submenu__box">
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="video.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Видеообзоры
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="photo.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фотогаллерея
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="topline__nav-item topline__nav-item--with-submenu topline__nav-item--with-local-submenu js-topline-nav-item-with-submenu">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text js-animate-scroll"
+            href="#services">
+            Услуги
+          </a>
+          
+          <button
+            class="topline__nav-item-open-btn js-topline-nav-item-open-btn">
+            <svg class="icon icon--16">
+              <use
+                xlink:href="/assets/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+          
+          <div class="topline__nav-item-submenu submenu js-submenu">
+            <div class="submenu__shell">
+              <div class="submenu__box-shell">
+                <div class="submenu__box">
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="projection.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Проектирование
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="foundations.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Фундаменты
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="flexible-three.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Гибкое дерево
+                  </a>
+                  
+                  <a
+                    class="submenu__box-link btn btn--secondary-text btn--secondary-text-small"
+                    href="build-material.html">
+                    <svg class="submenu__box-link-arrow icon icon--16">
+                      <use
+                        xlink:href="/assets/sprite/sprite.svg#arrow-btn-long"></use>
+                    </svg>
+                    
+                    Строительные материалы
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="vacancy.html">
+            Вакансии
+          </a>
+        </div>
+        
+        <div
+          class="topline__nav-item btn btn--secondary-text">
+          <a
+            class="topline__nav-item-link js-topline-nav-item-link btn btn--secondary-text"
+            href="contacts.html">
+            Контакты
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <ul class="breadcrumbs" itemscope
+        itemtype="https://schema.org/BreadcrumbList">
+      <li
+        class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a class="breadcrumbs__link accessibility-link" href="index.html"
+           itemprop="item">
+          <span itemprop="name">Главная</span>
+        </a>
+        
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li
+        class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a href="#" class="breadcrumbs__link accessibility-link"
+           itemprop="item">
+          <span itemprop="name">Услуги</span>
+        </a>
+        
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      <li
+        class="breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope
+        itemtype="https://schema.org/ListItem"
+      >
+        <a href="#" class="breadcrumbs__link accessibility-link"
+           itemprop="item">
+          <span itemprop="name">Гибкое дерево</span>
+        </a>
+        
+        <meta itemprop="position" content="3" />
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main class="main js-main">
+  <section class="section section--with-title-block">
+    <div class="wrap">
+      <div class="title-block title-block--with-img mb-24-0">
+        <div class="picture title-block__bg">
+          <img
+            class="picture__img"
+            loading="lazy" src="/assets/img/pages/services/flexy-tree.webp"
+            alt="">
+        </div>
+        
+        <div class="shell shell--grid shell--2">
+          <a
+            href="#order"
+            class="title-block__content content js-animate-scroll">
+            <h1 class="h3">
+              Гибкое дерево
+            </h1>
+            
+            <p>
+              Ищете способ добавить вашему проекту нотку динамики и&nbsp;уникальности?
+              Гибкие деревья&nbsp;&mdash; это элегантное решение, которое
+              позволяет вам менять форму и&nbsp;направление ветвей по&nbsp;своему
+              усмотрению.
+            </p>
+            
+            <p
+              class="btn btn--small btn--tertiary-orange title-block__order-btn">
+              Заказать
+              
+              <svg class="icon icon--20">
+                <use
+                  xlink:href="/assets/sprite/sprite.svg#arrow-right-white"></use>
+              </svg>
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section
+    id="services"
+    class="section section--spec2-padding">
+    <div class="wrap">
+      <div
+        class="shell shell--grid shell--2 shell--gap-32-24-16">
+        <div class="shell__block shell__block--justify-center">
+          <h2 class="h1 mb-16-12-12">
+            Гибкое дерево
+          </h2>
+          
+          <p class="h4 green montserrat">
+            ваш дом в&nbsp;гармонии с&nbsp;природой
+          </p>
+        </div>
+        
+        <div class="shell__block content">
+          <strong class="h5 neutral">
+            Мечтаете о&nbsp;доме, который дышит и&nbsp;живет в&nbsp;унисон с&nbsp;природой?
+            Технология строительства из&nbsp;**гибкого дерева**&nbsp;&mdash; это
+            не&nbsp;просто дань экотрендам, это разумный выбор в&nbsp;пользу
+            **долговечности, комфорта и&nbsp;уникальной эстетики.
+          </strong>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section section--border-top">
+    <div class="wrap">
+      <h2 class="h1 mb-24-16-16 align-center">
+        Преимущества <span class="green">гибкого дерева:</span>
+      </h2>
+      
+      <div class="arrow-box mb-40-32-24">
+        <div class="arrow-box__line"></div>
+      </div>
+      
+      <div class="shell shell--grid shell--4 shell--gap-32 props props--build">
+        <div class="props__card  props__card--no-icon">
+          <p class="props__card-figure h1 mb-32-24-20">
+            1
+          </p>
+          
+          <h3 class="h5 props__card-title">
+            Экологичность и&nbsp;безопасность
+          </h3>
+          
+          <p class="props__card-subtitle">
+            материал обработан натуральными пропитками, сохраняя все полезные
+            свойства древесины.
+          </p>
+        </div>
+        
+        <div class="props__card props__card--no-icon">
+          <p class="props__card-figure h1 mb-32-24-20">
+            2
+          </p>
+          
+          <h3 class="h5 props__card-title">
+            Высокая прочность и&nbsp;долговечность
+          </h3>
+          
+          <p class="props__card-subtitle">
+            благодаря особой технологии обработки дерево приобретает повышенную
+            устойчивость к&nbsp;влаге, грибкам и&nbsp;вредителям.
+          </p>
+        </div>
+        
+        <div class="props__card props__card--no-icon">
+          <p class="props__card-figure h1 mb-32-24-20">
+            3
+          </p>
+          
+          <h3 class="h5 props__card-title">
+            Энергоэффективность
+          </h3>
+          
+          <p class="props__card-subtitle">
+            дома из&nbsp;гибкого дерева обладают отличной теплоизоляцией, что
+            позволяет экономить на&nbsp;отоплении зимой и&nbsp;кондиционировании
+            летом.
+          </p>
+        </div>
+        
+        <div class="props__card props__card--no-icon">
+          <p class="props__card-figure h1 mb-32-24-20">
+            4
+          </p>
+          
+          <h3 class="h5 props__card-title">
+            Уникальный дизайн
+          </h3>
+          
+          <p class="props__card-subtitle">
+            пластичность материала открывает безграничные возможности для
+            реализации самых смелых архитектурных решений.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section section--border-top">
+    <div class="wrap">
+      <h2 class="h1 mb-24-16-16 align-center">
+        Инструкция по монтажу гибкой доски
+      </h2>
+      
+      <div class="arrow-box mb-40-32-24">
+        <div class="arrow-box__line"></div>
+      </div>
+      
+      <div class="content">
+        <p>
+          Если материал перевозился в&nbsp;холодное время года, то&nbsp;перед
+          монтажом ему необходимо адаптироваться в&nbsp;помещении в&nbsp;течении
+          не&nbsp;менее 3&nbsp;часов. При низких температурах доска теряет свою
+          гибкость и&nbsp;становится хрупкой. После адаптации в&nbsp;теплом
+          помещении, свойства возвращаются.
+        </p>
+        
+        <p>
+          онтаж производится при комнатной температуре в&nbsp;сухом помещении и&nbsp;нормальной
+          влажности. Монтаж гибкой доски на&nbsp;улице производится в&nbsp;теплое
+          сухое время года. Рекомендованная температура работы с&nbsp;гибкой
+          доской от + 15&nbsp;С&deg; При монтаже при температуре ниже,
+          рекомендуем выносить доску поштучно из&nbsp;теплого помещения и&nbsp;моментально
+          приклеивать к&nbsp;подготовленной поверхности. После монтажа ей&nbsp;уже
+          низкие температуры не&nbsp;страшны, так как в&nbsp;приклеенном виде
+          свойства гибкости не&nbsp;имеют никакого значения.
+        </p>
+        
+        <strong>
+          Перед монтажом, не&nbsp;забудьте перемешать доску между собой, чтобы
+          на&nbsp;фасаде не&nbsp;было цветовых пятен. Рекомендуем сделать
+          предварительную раскладку на&nbsp;плоской поверхности (на&nbsp;полу).
+        </strong>
+        
+        <p>
+          При монтаже доски на&nbsp;улице мы&nbsp;рекомендуем использовать
+          различные плиточные сухие клея, клея для керамогранита и&nbsp;т.д.
+          обязательно морозостойкие! Для монтажа в&nbsp;помещении на&nbsp;гипсокартон,
+          ЦСП, ОСБ, ДСП, фанеру и&nbsp;другие схожие поверхности, рекомендуем
+          использовать специальный акриловый клей &laquo;Bossik&raquo; для
+          гибкой доски. Он&nbsp;также подойдет для приклеивания доски на&nbsp;Пеноплекс
+          при наружной отделке.
+        </p>
+        
+        <p>
+          Поверхность, на&nbsp;которую будет монтироваться доска, должна быть
+          тщательно подготовлена, выровнена и&nbsp;предварительно покрыта слоем
+          раствора увеличивающего адгезию клея (например бетон-контакт в&nbsp;случае
+          использования сухих клеевых смесей и&nbsp;грунт-контактными растворами
+          в&nbsp;случае использования клея &laquo;Bossik&raquo;).
+        </p>
+        
+        <p>
+          Для резки материала используется строительная линейка, угольник,
+          острый канцелярский нож или ножницы.
+        </p>
+        
+        <p>
+          Для оклейки углов возможно использовать несколько вариантов стыковки
+          материала, например стык в&nbsp;стык с&nbsp;предварительной обработкой
+          краев доски наждачной бумагой под 45&deg;.
+        </p>
+        
+        <p>
+          Клеевой раствор (на&nbsp;основе сухих строительных смесей) на&nbsp;поверхность
+          наносится гребенчатым шпателем, поочередно под каждую доску. Клей
+          &laquo;Bossik&raquo;&nbsp;же наносится кисточкой на&nbsp;каждую доску
+          либо на&nbsp;саму поверхность. Нанеся клей, возьмите доску за&nbsp;края
+          двумя руками, прислоните к&nbsp;стене, выровняйте и&nbsp;прокатайте
+          валиком. Излишний клей, выступивший по&nbsp;краям (или возможно через
+          декоративные трещины в&nbsp;самой доске) устраните шпателем и&nbsp;сотрите
+          влажной тряпкой, чтобы не&nbsp;осталось следов после высыхания. Гибкую
+          доску допустимо монтировать с&nbsp;зазором между досками, либо плотно
+          друг к&nbsp;другу. Из-за декоративных неровностей или шероховатостей
+          по&nbsp;краям, возможно, после монтажа потребуется затирка швов.
+        </p>
+        
+        <p>
+          После монтажа, рекомендуется нанести на&nbsp;поверхность дополнительно
+          лак по&nbsp;камню. Лак наносится в&nbsp;2-4&nbsp;слоя, матовый или
+          глянцевый на&nbsp;ваш выбор.
+        </p>
+      </div>
+      
+      <div class="picture picture--scale picture--instruction">
+        <img
+          class="picture__img"
+          loading="lazy" src="/assets/img/pages/services/instruction.webp"
+          alt="">
+      </div>
+    </div>
+  </section>
+  
+  <section class="section section--border-top section--bg-grey">
+    <div class="wrap">
+      <h2 class="h1 mb-24-16-16 align-center">
+        Правила хранения и&nbsp;эксплуатации.
+      </h2>
+      
+      <div class="arrow-box mb-40-32-24">
+        <div class="arrow-box__line"></div>
+      </div>
+      
+      <div class="content">
+        <strong>
+          Во&nbsp;время эксплуатации и&nbsp;хранения для снятия загрязнения с&nbsp;поверхности
+          категорически запрещается использовать:
+        </strong>
+        
+        <ul>
+          <li>
+            все виды растворителей (эфир, бензин, ацетон и&nbsp;другие виды
+            растворителей);
+          </li>
+          
+          <li>
+            различные химические реагенты;
+          </li>
+          
+          <li>
+            активные химические вещества;
+          </li>
+          
+          <li>
+            средства, содержащие абразивные вещества, во&nbsp;избежание
+            механических повреждений (сода, наждачная бумага и&nbsp;другие виды
+            абразивов).
+          </li>
+        </ul>
+        
+        <p>
+          Срок гарантии на&nbsp;гибкую доску Bossik составляет 12&nbsp;месяцев
+          при условии соблюдения условий хранения и&nbsp;эксплуатации и&nbsp;распространяется
+          только на&nbsp;производственные дефекты. Гарантия не&nbsp;распространяется
+          на&nbsp;монтажные работы и&nbsp;в&nbsp;случаях, если были нарушены
+          правила монтажа и&nbsp;условия эксплуатации.
+        </p>
+        
+        <strong>
+          Гарантия не&nbsp;распространяется на&nbsp;Товар и&nbsp;Производитель
+          не&nbsp;отвечает за&nbsp;качество продукции в&nbsp;следующих случаях:
+        </strong>
+        
+        <ul>
+          <li>
+            Ущерб нанесенный в&nbsp;результате умышленных или ошибочных действий
+            потребителя;
+          </li>
+          
+          <li>
+            Наличие механических повреждений;
+          </li>
+          
+          <li>
+            Ущерб нанесенный в&nbsp;результате не&nbsp;соблюдения правил
+            эксплуатации;
+          </li>
+          
+          <li>
+            Использование не&nbsp;по&nbsp;назначению;
+          </li>
+          
+          <li>
+            Ущерб в&nbsp;следствие обстоятельств непреодолимой силы;
+          </li>
+          
+          <li>
+            Ущерб вызванный попаданием на&nbsp;изделие посторонних предметов или
+            жидкостей;
+          </li>
+          
+          <li>
+            Ущерб в&nbsp;результате транспортировки;
+          </li>
+          
+          <li>
+            Ущерб в&nbsp;результате нарушения условий монтажа.
+          </li>
+          
+          <li>
+            Ущерб в&nbsp;результате нарушения условий эксплуатации
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <a
+    target="_blank"
+    href="#"
+    class="section section--bg-blue">
+    <div class="wrap">
+      <div class="shell shell--grid shell--2 shell--gap-32">
+        <div class="shell__block shell--color-white">
+          <h2 class="h1 mb-16-12-12">
+            Прайс лист
+          </h2>
+          
+          <p class="green h4 montserrat">
+            ваш дом в&nbsp;гармонии с&nbsp;природой
+          </p>
+        </div>
+        
+        <p class="btn btn--download">
+          <img class="icon icon--40" src="/assets/svg/system/doc.svg" alt="">
+          
+          открыть прайс-лист
+          
+          <svg class="icon icon--20">
+            <use
+              xlink:href="/assets/sprite/sprite.svg#download"></use>
+          </svg>
+        </p>
+      </div>
+    </div>
+  </a>
+  
+  <section
+    id="houses"
+    class="section  section--border-top-only-desktop">
+    <div class="wrap">
+      <h2 class="h1
+                 section__title
+                 align-center
+                 mb-24-16-8">
+        Построенные дома
+      </h2>
+      
+      <div class="arrow-box mb-40">
+        <div class="arrow-box__line"></div>
+      </div>
+      
+      <div class="houses-shell">
+        <div class="shell shell--grid shell--3 shell--gap-32-16-16 houses">
+          <a
+            href="catalog-detail.html"
+            class="houses__card accessibility-link">
+            <div class="houses__card-picture picture picture--scale">
+              <img
+                class="picture__img"
+                loading="lazy" src="/assets/img/pages/main/9.webp" alt="">
+            </div>
+            
+            <h3 class="h6 houses__card-title">
+              Загородный дом с&nbsp;гаражом на&nbsp;2&nbsp;машины
+            </h3>
+            
+            <div class="houses__card-tags">
+              <p class="houses__card-tag houses__card-tag--square">
+                Площадь дома: 206,55&nbsp;м&sup2;
+              </p>
+              
+              <p class="houses__card-tag houses__card-tag--year">
+                2024 год
+              </p>
+            </div>
+          </a>
+          
+          <a
+            href="catalog-detail.html"
+            class="houses__card accessibility-link">
+            <div class="houses__card-picture picture picture--scale">
+              <img
+                class="picture__img"
+                loading="lazy" src="/assets/img/pages/main/10.webp" alt="">
+            </div>
+            
+            <h3 class="h6 houses__card-title">
+              20ИФ02.04
+            </h3>
+            
+            <div class="houses__card-tags">
+              <p class="houses__card-tag houses__card-tag--square">
+                Площадь дома: 77&nbsp;м&sup2;
+              </p>
+              
+              <p class="houses__card-tag houses__card-tag--year">
+                2024 год
+              </p>
+            </div>
+          </a>
+          
+          <a
+            href="catalog-detail.html"
+            class="houses__card accessibility-link">
+            <div class="houses__card-picture picture picture--scale">
+              <img
+                class="picture__img"
+                loading="lazy" src="/assets/img/pages/main/11.webp" alt="">
+            </div>
+            
+            <h3 class="h6 houses__card-title">
+              Современный 1-этажный дом
+            </h3>
+            
+            <div class="houses__card-tags">
+              <p class="houses__card-tag houses__card-tag--year">
+                2024 год
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div
+        class="section__btn section__btn--center tablet-fluid mt-64-52-40 btn-tertiary-shell">
+        <a
+          class="btn btn--tertiary"
+          href="photo.html">
+          <span class="underline--btn-tertiary">
+               Просмотреть все
+          </span>
+          
+          <div class="svg-shell">
+            <svg class="icon icon--20">
+              <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
+        </a>
+        
+        <div class="btn-tertiary-bg"></div>
+        <div class="btn-tertiary-border"></div>
+      </div>
+    </div>
+  </section>
+  
+  <section
+    id="order"
+    class="section section--no-tablet-padding section--border-top">
+    <div class="wrap">
+      <div class="order">
+        <div class="picture order__bg-shell">
+          <img
+            class="picture__img"
+            loading="lazy" src="/assets/img/pages/main/16.webp" alt="">
+        </div>
+        
+        <div class="order__shell shell shell--grid shell--2">
+          <form class="order__form js-order-form">
+            <h2 class="h2 order__form-title">
+              Оставьте заявку на&nbsp;консультацию
+            </h2>
+            
+            <p class="order__form-subtitle">
+              Постройте свой дом мечты. Оставьте заявку на&nbsp;консультацию
+              прямо сейчас!
+            </p>
+            
+            <div class="order__form-inputs">
+              <div
+                class="order__form-input-elem">
+                <label class="order__form-input-label" for="fullName">
+                  Имя
+                </label>
+                
+                <div class="order__form-input-box input__box">
+                  <span
+                    class="order__form-input-placeholder js-order-form-input-placeholder">
+                    ФИО
+                  </span>
+                  
+                  <input class="input order__form-input js-order-form-input"
+                         id="fullName" name="fullName" required="" type="text">
+                </div>
+              </div>
+              
+              <div
+                class="order__form-input-elem">
+                <label class="order__form-input-label" for="phone">
+                  Tелефон
+                </label>
+                
+                <div class="order__form-input-box input__box">
+                  <span
+                    class="order__form-input-placeholder js-order-form-input-placeholder">
+                    +7 | 9
+                  </span>
+                  
+                  <input class="input order__form-input js-order-form-input"
+                         id="phone" name="phone" required="" type="text">
+                </div>
+              </div>
+              
+              <div
+                class="order__form-input-elem">
+                <label class="order__form-input-label" for="email">
+                  e-mail
+                </label>
+                
+                <div class="order__form-input-box input__box">
+                  <span
+                    class="order__form-input-placeholder js-order-form-input-placeholder">
+                    @
+                  </span>
+                  
+                  <input class="input order__form-input js-order-form-input"
+                         id="email" name="email" required="" type="text">
+                </div>
+              </div>
+            </div>
+            
+            <button
+              class="order__submit-btn btn btn--tertiary-orange btn--fluid">
+              Отправить заявку
+            </button>
+            
+            <label class="checkbox__label">
+              <input checked="checked" type="checkbox"
+                     class="input checkbox__input order__form-agree-input js-order-form-agree-input v-hidden"
+                     name="check" value="">
+              
+              <span class="checkbox__text">
+                  Вы&nbsp;даёте согласие на&nbsp;
+                <a target="_blank"
+                   class="btn btn--primary-text"
+                   href="">
+                    обработку персональных данных
+                </a>
+              </span>
+              
+              <svg class="checkbox__mark">
+                <use xlink:href="/assets/sprite/sprite.svg#checkbox-mark"></use>
+              </svg>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a
+      class="footer__logo-link accessibility-link"
+      href="index.html">
+      <img
+        class="footer__logo"
+        src="/assets/img/logo/only-logo.webp" alt="">
+    </a>
+    
+    <div class="footer__links">
+      <div class="footer__links-box">
+        <a
+          class="footer__link footer__link--title accessibility-link"
+          href="catalog.html">
+          Каталог
+        </a>
+        
+        <div class="footer__links-shell">
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            Каркасные дома
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            Каркасные бани
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            До&nbsp;100 кв.м.
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            До&nbsp;150 кв.м.
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            До&nbsp;200 кв.м.
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            Барнхаус
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            Финские дома
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            Современные
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            1-этажные
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            1,5-этажные
+          </a>
+          
+          <a
+            class="footer__link accessibility-link"
+            href="catalog.html">
+            2-этажные
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer__links-box">
+        <a
+          class="footer__link footer__link--title accessibility-link"
+          href="index.html#">
+          Покупателям
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="projection.html">
+          Проектирование
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="foundations.html">
+          Фундаменты
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="flexible-three.html">
+          Гибкое дерево
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="build-material.html">
+          Строительные материалы
+        </a>
+        
+        <a
+          target="_blank"
+          class="footer__link accessibility-link"
+          href="#">
+          Технадзор
+        </a>
+        
+        <a
+          target="_blank"
+          class="footer__link accessibility-link"
+          href="#">
+          Сопровождение объекта
+        </a>
+      </div>
+      
+      <div class="footer__links-box">
+        <a
+          class="footer__link footer__link--title accessibility-link"
+          href="#">
+          Информация
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="company.html">
+          О компании
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="video.html">
+          Видеообзоры
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="photo.html">
+          Фотогаллерея
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="vacancy.html">
+          Вакансии
+        </a>
+        
+        <a
+          class="footer__link accessibility-link"
+          href="contacts.html">
+          Контакты
+        </a>
+      </div>
+      
+      <div class="footer__links-box footer__links-box--contacts">
+        <a
+          class="footer__link footer__link--title accessibility-link"
+          href="contacts.html">
+          Контакты
+        </a>
+        
+        <p
+          class="footer__link">
+          194000, Санкт-Петербург. посёлок&nbsp;Здесьлово, Здесьское шоссе, 123,
+          стр.1
+        </p>
+        
+        <p class="footer__link">
+          Ежедневно с&nbsp;10:00 до&nbsp;19:00
+        </p>
+        
+        <p class="footer__link">
+          <a
+            class="footer__link--contact underline accessibility-link"
+            href="mailto:info@moidom.group">info@moidom.group</a>
+          Отдел продаж
+        </p>
+        
+        <a
+          class="footer__link footer__link--contact footer__link--phone accessibility-link"
+          href="tel:+79052122685">
+          +7 905 212 2685
+        </a>
+        
+        <button
+          type="button"
+          class="footer__link footer__link-btn btn btn--primary-text">
+          Заказать обратный звонок
+          
+          <svg class="icon icon--16">
+            <use xlink:href="/assets/sprite/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
+        
+        <div class="footer__social">
+          <p
+            class="footer__link footer__link--title">
+            Присоединяйтесь к нам
+          </p>
+          
+          <div class="footer__social-shell">
+            <a
+              class="footer__social-link footer__social-link--youtube accessibility-link  accessibility-link--scale"
+              href="">
+              <svg class="icon icon--32">
+                <use xlink:href="/assets/sprite/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+            
+            <a
+              class="footer__social-link footer__social-link--tg accessibility-link accessibility-link--scale"
+              href="">
+              <svg class="icon icon--32">
+                <use xlink:href="/assets/sprite/sprite.svg#tg"></use>
+              </svg>
+            </a>
+            
+            <a
+              class="footer__social-link accessibility-link accessibility-link--scale"
+              href="">
+              <svg class="icon icon--32">
+                <use xlink:href="/assets/sprite/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__rules">
+      <p class="footer__rules-text">
+        Интернет-сайт МойДом носит исключительно информационный характер и&nbsp;ни&nbsp;при
+        каких условиях не&nbsp;является публичной офертой, определяемой
+        положениями Статьи 4З7 Гражданского кодекса Российской Федерации. Цены в&nbsp;офисах
+        продаж могут отличаться от&nbsp;цен на&nbsp;сайте. Чтобы получить
+        актуальную и&nbsp;подробную информацию о&nbsp;стоимости проектирования,
+        строительства домов, стоимости и&nbsp;условиях поставки пароизоляции и&nbsp;строительных
+        материалов, условиях обучения, акциях и&nbsp;иных специальных
+        предложениях, пожалуйста, обращайтесь к&nbsp;менеджерам по&nbsp;телефону,
+        указанному на&nbsp;сайте.
+      </p>
+      
+      <a
+        target="_blank"
+        class="footer__rules-link accessibility-link underline"
+        href="#">
+        Политика конфиденциальности
+      </a>
+    </div>
+    
+    <div class="footer__info">
+      <p>&laquo;Мой Дом&raquo; Group &copy;&nbsp;2010&ndash;2024. Все права
+        защищены.</p>
+      
+      <a
+        target="_blank"
+        href="https://espinoza.ru/"
+        class="footer__info-design accessibility-link">
+        <p>
+          Задизайнено <span class="green">в&nbsp;Студии Espinoza</span>
+        </p>
+        
+        <svg class="footer__info-design-logo">
+          <use xlink:href="/assets/sprite/sprite.svg#espinoza"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -17,7 +17,11 @@
 }
 
 .underline--btn-tertiary {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(180deg, #20CDC2 0%, #20B6CD 100%);
   position: relative;
+  z-index: 2;
 
   &::after {
     display: block;
@@ -33,6 +37,14 @@
 
   .shell--color-white & {
     color: @white;
+  }
+
+  &.green {
+    color: @turqs-main;
+  }
+
+  &.montserrat {
+    .Montserrat();
   }
 }
 
@@ -187,4 +199,8 @@
   max-width: max-content;
   margin-inline: auto;
   text-align: center;
+}
+
+.montserrat {
+  .Montserrat()
 }

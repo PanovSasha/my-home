@@ -11,16 +11,28 @@
 
   @media @tablet {
     .radius(0);
-    border-bottom: 1px solid @blue5
+    border-bottom: 1px solid @blue5;
   }
 
   &--with-img {
     padding: @offset40;
+
+    @media @tablet {
+      padding: @offset32;
+    }
+
+    @media @l-mobile {
+      padding: @offset16;
+    }
   }
 
   &__bg {
     .abs-alignment();
     .object-fit();
+
+    @media @tablet {
+      .radius(0);
+    }
   }
 
   &__content {
@@ -31,6 +43,11 @@
     position: relative;
     z-index: 1;
     min-height: 336px;
+
+    @media @tablet {
+      min-height: 280px;
+      padding: @offset24;
+    }
   }
 
   &__title {

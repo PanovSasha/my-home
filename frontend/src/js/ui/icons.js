@@ -31,6 +31,7 @@ require('../../assets/sprite/common/checkmarks/checkbox-mark.svg')
 
 //system
 require('../../assets/sprite/common/system/cross.svg')
+require('../../assets/sprite/common/system/download.svg')
 require('../../assets/sprite/common/system/message.svg')
 
 //detail-info-props

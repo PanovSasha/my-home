@@ -5,6 +5,20 @@
   overflow: hidden;
   position: relative;
 
+  &--instruction {
+    .full-width-tablet();
+    aspect-ratio: 1216/456;
+    margin-block: 120px -56px;
+
+    @media @tablet {
+      margin-block: 80px -32px;
+    }
+
+    @media @l-mobile {
+      margin-block: 60px -16px;
+    }
+  }
+
   &__img {
     .abs-alignment();
     .object-fit();
@@ -16,7 +30,6 @@
       }
     }
   }
-
 
   .shell__block--with-img-and-squares & {
     .radius();
