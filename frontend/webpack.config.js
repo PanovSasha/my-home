@@ -174,6 +174,14 @@ module.exports = {
       },
     }),
     new HTMLWebpackPlugin({
+      template: './public/info/photo-detail.html',
+      inject: 'body',
+      filename: 'photo-detail.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
       template: './public/info/vacancy.html',
       inject: 'body',
       filename: 'vacancy.html',

@@ -16,6 +16,10 @@
     background-color: @neutral100;
     color: @blue60;
     padding: 4px @offset8;
+
+    &--no-bg {
+      background-color: transparent;
+    }
   }
 
   &__title {
@@ -72,6 +76,10 @@
     text-transform: uppercase;
     margin-bottom: @offset16;
     padding-block: @offset8;
+
+    &--no-mb {
+      margin-bottom: 0;
+    }
   }
 
   &__banks-shell {
@@ -103,7 +111,10 @@
     }
   }
 
-  &__banks-img {
+  &__banks-list {
+    li + li {
+      margin-top: @offset8;
+    }
   }
 
   &__order-show-form-btn {
