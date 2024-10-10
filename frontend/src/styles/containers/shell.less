@@ -84,6 +84,20 @@
     }
   }
 
+  &--service-info {
+    padding: @offset32;
+    margin-top: -72px;
+
+    @media @tablet {
+      padding: 0;
+      margin-top: -@offset40;
+    }
+
+    @media @l-mobile {
+      margin-top: -@offset24;
+    }
+  }
+
   &__block {
     .f-column();
     align-items: start;
