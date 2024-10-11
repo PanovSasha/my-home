@@ -7,6 +7,13 @@
   justify-content: center;
   gap: @offset10;
 
+  @media @l-mobile {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    grid-template-areas: 'pages pages pages'
+                          'input btn .';
+  }
+
   &:after {
     display: table;
     content: ' ';
@@ -17,6 +24,15 @@
     display: flex;
     align-items: center;
     gap: 6px;
+  }
+
+  .cards__pagination & {
+    width: max-content !important;
+
+    @media @l-mobile {
+      width: 100% !important;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -35,6 +51,7 @@
 
   .show& {
     .smooth-show() !important;
+    color: @turqs-main;
   }
 
   input {
@@ -56,6 +73,11 @@
 
   .show& {
     .smooth-show() !important;
+  }
+
+  input {
+    border-color: @turqs-main !important;
+    color: @black !important;
   }
 }
 
@@ -91,8 +113,13 @@
     padding: 0;
 
     @media @l-mobile {
-      .width-height(26, 26) !important;
-      min-width: 26px !important;
+      .width-height(24, 24) !important;
+      font-size: 10px !important;
+      min-width: 24px !important;
+    }
+
+    @media @m-mobile {
+      display: none !important;
     }
   }
 }
@@ -122,10 +149,19 @@
     padding: 0;
 
     @media @l-mobile {
-      .width-height(26, 26) !important;
-      min-width: 26px !important;
+      .width-height(24, 24) !important;
+      font-size: 10px !important;
+      min-width: 24px !important;
+    }
+
+    @media @m-mobile {
+      display: none !important;
     }
   }
+}
+
+.paginationjs-pages {
+  grid-area: pages;
 }
 
 .paginationjs-page {
@@ -153,8 +189,9 @@
     }
 
     @media @l-mobile {
-      min-width: 26px !important;
-      height: 26px !important;
+      .width-height(24, 24) !important;
+      font-size: 10px !important;
+      min-width: 24px !important;
     }
   }
 

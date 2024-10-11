@@ -466,13 +466,10 @@ export const catalogFns = (data) => {
         data: data,
         processData: true,
         success: (data) => {
-          console.log(data, 'data')
-
           scrollToTopCatalog()
 
           const { countRecord, endList, items, pageCount, pageSize } = data.data
 
-          console.log(data)
           if (countRecord) {
             $TITLE_COUNT.text(`Найдено проектов: ${countRecord}`)
           } else {

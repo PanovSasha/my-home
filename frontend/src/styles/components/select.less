@@ -21,7 +21,7 @@
     background-color: @white;
     border: 1px solid @blue5;
     box-shadow: 0 10px 10px -5px #0000007A, 0px 20px 25px -5px #8093BA14;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     top: 100%;
     left: 0;
@@ -30,6 +30,10 @@
     padding: 6px @offset16;
     max-height: 204px;
     display: none;
+
+    @media @large-than-tablet {
+      .hide-scrollbar();
+    }
 
     .select.open & {
       .smooth-show();

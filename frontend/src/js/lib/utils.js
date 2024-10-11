@@ -21,14 +21,6 @@ export const animateScrollWhileClickToAnchor = () => {
     e.preventDefault()
     const $t = $(this)
 
-    let fixedOffset
-
-    if ($WINDOW.width() > TABLET_WIDTH) {
-      fixedOffset = 120
-    } else {
-      fixedOffset = 70
-    }
-
     if ($WINDOW.width() < TABLET_WIDTH) {
       $TOPLINE.removeClass(MOBILE_CLASS)
       $BODY.removeClass(BODY_LOCK_CLASS)
