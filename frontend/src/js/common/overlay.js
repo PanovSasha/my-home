@@ -1,52 +1,49 @@
-import {
-  $BODY,
-  $DOCUMENT,
-  $TOPLINE,
-  BODY_LOCK_CLASS,
-  BORDER_BOTTOM_CLASS,
-  DIRECTIONS_MENU_CLASS,
-  SHOW_CLASS,
-  YA_POPUP_CLASS,
-} from '../lib/constants'
+import { $BODY, $DOCUMENT, BODY_LOCK_CLASS, SHOW_CLASS } from '../lib/constants'
 import { isEscPressed } from '../lib/utils'
-
-export const closeOverlay = () => {
-  const $overlay = $('.js-overlay')
-  const $overlay_items = $('.js-overlay-item')
-
-  $overlay.removeClass(SHOW_CLASS).removeClass(YA_POPUP_CLASS)
-  $overlay_items.removeClass(SHOW_CLASS)
-}
 
 export function overlaysFunctions() {
   const $overlay = $('.js-overlay')
   const $overlayItems = $('.js-overlay-item')
   const $BTNS = $('.js-show-overlay-btn')
+  const $videoShell = $('.js-overlay-video-shell')
 
-  const checkMeteorMenuStatus = () => {
+  const closeOverlay = () => {
+    $BODY.removeClass(BODY_LOCK_CLASS)
+    $videoShell.text('')
+    $overlay.removeClass(SHOW_CLASS)
+    $overlayItems.removeClass(SHOW_CLASS)
+  }
+
+  const toggleOverlay = () => {
     if ($overlay.hasClass(SHOW_CLASS)) {
       $BODY.addClass(BODY_LOCK_CLASS)
-      $TOPLINE.addClass(BORDER_BOTTOM_CLASS)
     } else {
-      $BODY.removeClass(BODY_LOCK_CLASS)
-      $TOPLINE.removeClass(BORDER_BOTTOM_CLASS).removeClass(DIRECTIONS_MENU_CLASS)
+      closeOverlay()
     }
   }
 
   const openOverlay = () => {
     $BTNS.on('click', function (event) {
       const $btn = $(this)
-      const $overlayVal = $btn.attr('data-overlay')
+      const overlayVal = $btn.attr('data-overlay-anchor')
+
+      if (overlayVal === 'video') {
+        const $video = $btn.find('video').clone()
+        $video
+          .attr('autoplay', 'true')
+          .attr('controls', 'true')
+          .addClass('overlay-video__source')
+          .removeClass('picture__img youtube__picture-img')
+        console.log($video)
+
+        $videoShell.append($video)
+      }
 
       $overlay.addClass(SHOW_CLASS)
       $overlayItems.removeClass(SHOW_CLASS)
-      $(`div[data-overlay="${$overlayVal}"]`).addClass(SHOW_CLASS)
+      $(`[data-overlay="${overlayVal}"]`).addClass(SHOW_CLASS)
 
-      if ($overlayVal === 'd-menu') {
-        $TOPLINE.addClass(DIRECTIONS_MENU_CLASS)
-      }
-
-      checkMeteorMenuStatus()
+      toggleOverlay()
     })
   }
 
@@ -54,14 +51,12 @@ export function overlaysFunctions() {
     $overlay.on('click', ({ target }) => {
       if ($(target).hasClass('js-overlay')) {
         closeOverlay()
-        checkMeteorMenuStatus()
       }
     })
 
     $DOCUMENT.on('keyup', (event) => {
       if (isEscPressed(event)) {
         closeOverlay()
-        checkMeteorMenuStatus()
       }
     })
   }
@@ -70,8 +65,7 @@ export function overlaysFunctions() {
     const $closeBtn = $('.js-overlay-close-btn')
 
     $closeBtn.on('click', function () {
-      closeOverlay()
-      checkMeteorMenuStatus()
+      toggleOverlay()
     })
   }
 

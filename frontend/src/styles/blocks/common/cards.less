@@ -58,6 +58,7 @@
       .radius(6);
       color: @neutral600;
       font-weight: 600;
+      padding: @offset8 @offset12;
     }
 
     .active& {
@@ -88,6 +89,20 @@
     @media @l-mobile {
       grid-template-columns: 1fr;
       margin-top: @offset24;
+    }
+  }
+
+  &__video-shell {
+    .radius();
+    .transition(scale);
+    border: 1px solid @blue10;
+    cursor: pointer;
+    padding: @offset16;
+
+    &:hover {
+      @media @large-than-tablet {
+        scale: 1.02;
+      }
     }
   }
 

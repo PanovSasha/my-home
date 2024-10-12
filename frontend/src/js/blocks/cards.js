@@ -88,12 +88,15 @@ export const cardsFns = () => {
     }
 
     const addFiltersToUrlByYearPress = () => {
-      const $yearBtns = $('[data-sort-cards]')
+      const $yearBtns = $('[data-sort-type]')
 
       $yearBtns.on('click', function () {
         const $t = $(this)
 
-        addQueryParamsToUrl({ year: $t.attr('data-sort-cards'), page: 1 })
+        addQueryParamsToUrl({
+          [$t.attr('data-sort-type')]: $t.attr('data-value'),
+          page: 1,
+        })
       })
     }
 
