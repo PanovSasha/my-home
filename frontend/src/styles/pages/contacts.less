@@ -1,0 +1,46 @@
+@import "descriptions";
+
+.map {
+  .shadow-2xl();
+  position: relative;
+
+  &__shell {
+    width: 100%;
+    height: 592px;
+
+    @media @tablet {
+      height: 392px;
+    }
+
+    @media @l-mobile {
+      height: 360px;
+    }
+  }
+
+  &__info {
+    .radius(8);
+    .absY-alignment();
+    .f-column(16);
+    background-color: @white;
+    right: @offset48;
+    min-width: 350px;
+    max-width: 32%;
+    padding: @offset32 @offset48;
+
+    @media @tablet {
+      position: static;
+      min-width: 0;
+      max-width: 100%;
+      transform: none;
+      padding: @offset24;
+    }
+  }
+
+  &__info-descr {
+    .fs14-16(400);
+  }
+
+  &__info-block {
+    .f-column(8);
+  }
+}
