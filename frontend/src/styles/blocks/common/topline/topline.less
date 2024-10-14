@@ -473,6 +473,12 @@
         color: @white;
       }
     }
+
+    .current&::after {
+      @media @large-than-tablet {
+        width: 100%
+      }
+    }
   }
 
   &__nav-item-open-btn {
