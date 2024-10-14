@@ -480,8 +480,8 @@ export const catalogFns = (data) => {
             renderData(items)
           }
 
-          if (countRecord > pageCount) {
-            if (currentPage === 1) {
+          if (countRecord > pageCount && !endList) {
+            if (currentPage === 1 && pageCount > 1) {
               $CATALOG_RESULT.addClass(PAGINATION_CLASS)
               renderPagination(countRecord, pageSize)
             }
