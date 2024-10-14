@@ -229,6 +229,14 @@ module.exports = {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: './public/success-message.html',
+      inject: 'body',
+      filename: 'success-message.html',
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new CopyPlugin({
       patterns: [
         { from: './src/assets/img', to: './assets/img' },
