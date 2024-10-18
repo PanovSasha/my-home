@@ -9,14 +9,14 @@ export const inputFunctions = () => {
     $INPUTS.val('')
   }
 
-  $.each($INPUTS, function(_, el) {
+  $.each($INPUTS, function (_, el) {
     const $input = $(el)
     const $inputBox = $(el).parent('.js-input-box')
 
     const $eraseBtn = $inputBox.find('.js-input-erase-btn:first')
 
     const toggleShowEraseBtn = () => {
-      $input.on('input', function() {
+      $input.on('input', function () {
         if ($input.val().trim() !== '') {
           $eraseBtn.addClass(SHOW_CLASS)
         } else {
@@ -26,14 +26,18 @@ export const inputFunctions = () => {
     }
 
     const eraseInputValByBtn = () => {
-      $eraseBtn.on('click', function() {
-        $input.val('').focus()
-        $eraseBtn.removeClass(SHOW_CLASS)
+      $eraseBtn.on('click', function () {
+        if ($input.attr('name') === 'phone') {
+          $input.val('9').focus()
+        } else {
+          $input.val('').focus()
+          $eraseBtn.removeClass(SHOW_CLASS)
+        }
       })
     }
 
     const showEraseBtnOnFocusInput = () => {
-      $input.on('focus', function() {
+      $input.on('focus', function () {
         if ($input.val().trim() !== '') {
           $eraseBtn.addClass(SHOW_CLASS)
         }
@@ -45,13 +49,13 @@ export const inputFunctions = () => {
     showEraseBtnOnFocusInput()
   })
 
-  $.each($SEARCH_INPUTS, function(_, el) {
+  $.each($SEARCH_INPUTS, function (_, el) {
     const $input = $(el)
     const $inputBox = $(el).parent('.js-input-box')
     const $searchBtn = $inputBox.find('.js-input-search-btn:first')
 
     if ($SEARCH_INPUTS.length) {
-      $searchBtn.on('click', function() {
+      $searchBtn.on('click', function () {
         addQueryParamsToUrl({ q: $input.val() }, null, 'search/')
       })
 

@@ -77,10 +77,61 @@
   }
 
   &__form-input-box {
+    .fs20-32(400);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     position: relative;
+
+    .order__form-input-elem--phone & {
+      display: flex;
+
+      &::before {
+        .absY-alignment();
+        left: @offset48;
+        background-color: @neutral400;
+        content: '';
+        height: calc(100% - 1px);
+        width: 1px;
+      }
+
+      &.error-phone {
+        &::after {
+          .fs10-16();
+          font-weight: 400;
+          color: @red-error;
+          white-space: nowrap;
+          position: absolute;
+          bottom: -16px;
+          left: 12px;
+          content: 'Введите только цифры';
+        }
+      }
+    }
+
+    &.error-mail {
+      &::after {
+        .fs10-16();
+        font-weight: 400;
+        color: @red-error;
+        white-space: nowrap;
+        position: absolute;
+        bottom: -16px;
+        left: 12px;
+        content: 'Введите почту в формате user@domain.ru';
+      }
+    }
+  }
+
+  &__form-input-placeholder-prefix {
+    .absY-alignment();
+    left: 12px;
+  }
+
+  &__form-input {
+    padding-block: @offset8;
+
+    .order__form-input-elem--phone & {
+      padding-left: @offset60;
+    }
   }
 
   &__form-input-placeholder {
@@ -89,6 +140,34 @@
     color: @neutral300;
     left: @offset12;
     pointer-events: none;
+
+    &.error {
+      color: @red-error;
+
+      &::after {
+        .fs10-16();
+        font-weight: 400;
+        color: @red-error;
+        white-space: nowrap;
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+        content: 'Это обязательное поле для заполнения';
+      }
+    }
+
+    .order__form-input-elem--phone & {
+      color: @black;
+      left: @offset40;
+
+      &.error {
+        color: @red-error;
+
+        &::after {
+          left: -28px;
+        }
+      }
+    }
   }
 
   &__submit-btn {

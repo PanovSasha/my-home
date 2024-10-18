@@ -1121,7 +1121,7 @@
   
   <section
     id="order"
-    class="section section--no-tablet-padding section--border-top">
+    class="section section--border-top">
     <div class="wrap">
       <div class="order">
         <div class="picture order__bg-shell">
@@ -1131,7 +1131,7 @@
         </div>
         
         <div class="order__shell shell shell--grid shell--2">
-          <form class="order__form js-order-form">
+          <form action="javascript:" class="order__form js-order-form">
             <h2 class="h2 order__form-title">
               Оставьте заявку на&nbsp;консультацию
             </h2>
@@ -1148,31 +1148,49 @@
                   Имя
                 </label>
                 
-                <div class="order__form-input-box input__box">
+                <div class="order__form-input-box input__box js-input-box">
                   <span
                     class="order__form-input-placeholder js-order-form-input-placeholder">
                     ФИО
                   </span>
                   
-                  <input class="input order__form-input js-order-form-input"
-                         id="fullName" name="fullName" required="" type="text">
+                  <input
+                    class="input js-input order__form-input js-order-form-input"
+                    id="fullName" name="fullName" type="text">
+                  
+                  <button type="button"
+                          class="input__erase-btn js-input-erase-btn">
+                    <svg class="icon icon--20">
+                      <use xlink:href="assets/sprite/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
               
               <div
-                class="order__form-input-elem">
+                class="order__form-input-elem order__form-input-elem--phone js-order-form-input-elem-phone">
                 <label class="order__form-input-label" for="phone">
                   Tелефон
                 </label>
                 
-                <div class="order__form-input-box input__box">
+                <div class="order__form-input-box input__box js-input-box">
+                  <span class="order__form-input-placeholder-prefix">+7</span>
+                  
                   <span
                     class="order__form-input-placeholder js-order-form-input-placeholder">
-                    +7 | 9
+                    &nbsp;&nbsp;&nbsp;&nbsp;9
                   </span>
                   
-                  <input class="input order__form-input js-order-form-input"
-                         id="phone" name="phone" required="" type="text">
+                  <input
+                    class="input js-input order__form-input js-order-form-input"
+                    id="phone" name="phone" type="text">
+                  
+                  <button type="button"
+                          class="input__erase-btn js-input-erase-btn">
+                    <svg class="icon icon--20">
+                      <use xlink:href="assets/sprite/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
               
@@ -1182,20 +1200,28 @@
                   e-mail
                 </label>
                 
-                <div class="order__form-input-box input__box">
+                <div class="order__form-input-box input__box js-input-box">
                   <span
                     class="order__form-input-placeholder js-order-form-input-placeholder">
                     @
                   </span>
                   
-                  <input class="input order__form-input js-order-form-input"
-                         id="email" name="email" required="" type="text">
+                  <input
+                    class="input js-input order__form-input js-order-form-input"
+                    id="email" name="email" type="text">
+                  
+                  <button type="button"
+                          class="input__erase-btn js-input-erase-btn">
+                    <svg class="icon icon--20">
+                      <use xlink:href="assets/sprite/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
             
             <button
-              class="order__submit-btn btn btn--tertiary-orange btn--fluid">
+              class="order__submit-btn disable btn btn--tertiary-orange btn--fluid js-order-submit-btn">
               Отправить заявку
             </button>
             

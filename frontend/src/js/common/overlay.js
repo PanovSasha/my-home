@@ -34,7 +34,6 @@ export function overlaysFunctions() {
           .attr('controls', 'true')
           .addClass('overlay-video__source')
           .removeClass('picture__img youtube__picture-img')
-        console.log($video)
 
         $videoShell.append($video)
       }
