@@ -469,8 +469,6 @@ export const catalogFns = (data) => {
         success: (data) => {
           scrollToTopCatalog()
 
-          console.log(data)
-
           const { countRecord, endList, items, pageCount, pageSize } = data.data
 
           if (countRecord) {
@@ -483,20 +481,19 @@ export const catalogFns = (data) => {
               .html(`Проекты по&nbsp;вашим параметрам не&nbsp;найдены, измените условия поиска.`)
           }
 
-          console.log(items.length)
-
           if (items.length) {
             renderData(items)
-          } else {
-            if (countRecord > pageCount || !endList) {
+
+            if (countRecord > pageSize) {
               if (currentPage === 1 && pageCount > 1) {
                 $CATALOG_RESULT.addClass(PAGINATION_CLASS)
                 renderPagination(countRecord, pageSize)
               }
             } else {
-              console.log('hui')
               $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
             }
+          } else {
+            $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
           }
         },
       })
