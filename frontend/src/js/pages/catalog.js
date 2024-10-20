@@ -15,6 +15,7 @@ import {
   $WINDOW,
   CHECKED_CLASS,
   CLOSE_CLASS,
+  NO_RESULT_CLASS,
   OPEN_CLASS,
   PAGINATION_CLASS,
   SHOW_CLASS,
@@ -387,7 +388,7 @@ export const catalogFns = (data) => {
         return items
       }
 
-      $CATALOG_LIST.text('').append(renderDataItem(data))
+      $CATALOG_LIST.removeClass(NO_RESULT_CLASS).text('').append(renderDataItem(data))
     }
 
     const getDataParams = () => {
@@ -474,13 +475,15 @@ export const catalogFns = (data) => {
             $TITLE_COUNT.text(`Найдено проектов: ${countRecord}`)
           } else {
             $TITLE_COUNT.text(`Найдено проектов: 0`)
+
+            $CATALOG_LIST
+              .addClass(NO_RESULT_CLASS)
+              .html(`Проекты по&nbsp;вашим параметрам не&nbsp;найдены, измените условия поиска.`)
           }
 
           if (items.length) {
             renderData(items)
-          }
-
-          if (countRecord > pageCount && !endList) {
+          } else if (countRecord > pageCount && !endList) {
             if (currentPage === 1 && pageCount > 1) {
               $CATALOG_RESULT.addClass(PAGINATION_CLASS)
               renderPagination(countRecord, pageSize)
