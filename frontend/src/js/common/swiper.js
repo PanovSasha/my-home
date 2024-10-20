@@ -5,6 +5,16 @@ export const swiperFunctions = () => {
   const ACTIVE_SLIDER_CLASS = 'active-slide'
 
   const housesSliderFns = () => {
+    const hideSliderBtnsIfSlideNotEnough = (slider) => {
+      $.each(slider.$el, function (_, el) {
+        const $el = $(el)
+
+        if (slider.slides.length <= slider.passedParams.breakpoints[slider.currentBreakpoint].slidesPerView) {
+          $el.parent().find('.houses-slider__nav').hide()
+        }
+      })
+    }
+
     const housesSlider = new Swiper('.js-houses-slider', {
       slidesPerView: 1.2,
       spaceBetween: 8,
@@ -32,6 +42,8 @@ export const swiperFunctions = () => {
         nextEl: '.js-houses-slider-nav-btn-next',
       },
     })
+
+    hideSliderBtnsIfSlideNotEnough(housesSlider)
   }
 
   const detailSliderFns = () => {
