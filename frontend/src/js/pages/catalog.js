@@ -388,7 +388,7 @@ export const catalogFns = (data) => {
         return items
       }
 
-      $CATALOG_LIST.removeClass(NO_RESULT_CLASS).text('').append(renderDataItem(data))
+      $CATALOG_LIST.removeClass(NO_RESULT_CLASS).html('').append(renderDataItem(data))
     }
 
     const getDataParams = () => {
@@ -469,6 +469,8 @@ export const catalogFns = (data) => {
         success: (data) => {
           scrollToTopCatalog()
 
+          console.log(data)
+
           const { countRecord, endList, items, pageCount, pageSize } = data.data
 
           if (countRecord) {
@@ -481,15 +483,20 @@ export const catalogFns = (data) => {
               .html(`Проекты по&nbsp;вашим параметрам не&nbsp;найдены, измените условия поиска.`)
           }
 
+          console.log(items.length)
+
           if (items.length) {
             renderData(items)
-          } else if (countRecord > pageCount && !endList) {
-            if (currentPage === 1 && pageCount > 1) {
-              $CATALOG_RESULT.addClass(PAGINATION_CLASS)
-              renderPagination(countRecord, pageSize)
-            }
           } else {
-            $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
+            if (countRecord > pageCount || !endList) {
+              if (currentPage === 1 && pageCount > 1) {
+                $CATALOG_RESULT.addClass(PAGINATION_CLASS)
+                renderPagination(countRecord, pageSize)
+              }
+            } else {
+              console.log('hui')
+              $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
+            }
           }
         },
       })
