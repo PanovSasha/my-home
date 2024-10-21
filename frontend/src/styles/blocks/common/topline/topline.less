@@ -49,6 +49,10 @@
     align-items: center;
     padding-left: @offset16;
 
+    @media @l-mobile {
+      padding-left: @offset12;
+    }
+
     .mobile.topline & {
       @media @tablet {
         height: @offset56;
@@ -143,7 +147,6 @@
         background-color: @blue-main;
         display: block;
         margin: @offset6 auto;
-        transition: transform 0.1s ease-in-out;
 
         .mobile.topline & {
           transform: translateX(-5px) translateY(11px) rotate(90deg);
