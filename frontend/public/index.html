@@ -1476,7 +1476,8 @@
         </div>
         
         <div class="order__shell shell shell--grid shell--2">
-          <form action="javascript:" class="order__form js-order-form">
+          <form data-form-type="consultation" action="javascript:"
+                class="order__form js-order-form">
             <h2 class="h2 order__form-title">
               Оставьте заявку на&nbsp;консультацию
             </h2>
@@ -1588,6 +1589,10 @@
                 <use xlink:href="/assets/sprite/sprite.svg#checkbox-mark"></use>
               </svg>
             </label>
+            
+            <input type="text" class="v-hidden js-bot-check" aria-label=""
+                   value="0"
+                   placeholder="0">
           </form>
         </div>
       </div>

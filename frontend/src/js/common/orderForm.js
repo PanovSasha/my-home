@@ -13,6 +13,8 @@ export const orderFormFns = () => {
     const phone = $form.find('[name="phone"]')
     const email = $form.find('[name="email"]')
 
+    const $botCheckInput = $form.find('.js-bot-check')
+
     const $SUBMIT_BTN = $form.find('.js-order-submit-btn')
 
     const ERROR_PHONE = 'error-phone'
@@ -81,11 +83,17 @@ export const orderFormFns = () => {
       // bot нужен для проверки на бота если 0 то все хорошо иначе ошибка
       //
       // проверку на бота можешь навесить на событие input обязательного поля если оно произошло то это не бот и отправляем 0 иначе отправляем 1 или любое удобное для тебя значение
-      const data = {
+      const params = {
         fullName: name.val(),
-        phone: phone.val(),
+        phone: `+7${phone.val()}`,
         email: email.val(),
       }
+
+      const data = {}
+
+      data.params = params
+      data.type = $form.attr('data-form-type')
+      data.bot = $botCheckInput.val() || $botCheckInput.attr('placeholder') || 0
 
       $.ajax({
         url: '/api/v1/addFormRecord',
@@ -95,7 +103,7 @@ export const orderFormFns = () => {
         headers: {
           'Api-Key': 'tUKdAP2Gmv/?VyvCI16rAB=UN7yFpQvirTa5Ix21BzP4w6lFfqrSoySJfKVhXCpH',
         },
-        data: { form: data },
+        data: data,
         success: function ({ errors }) {
           let isError = false
 
