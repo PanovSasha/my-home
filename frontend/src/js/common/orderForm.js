@@ -99,8 +99,6 @@ export const orderFormFns = () => {
         success: function ({ errors }) {
           let isError = false
 
-          console.log(errors)
-
           if (errors.length) {
             errors.forEach(({ code }) => {
               isError = true

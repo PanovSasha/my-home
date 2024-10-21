@@ -1,9 +1,16 @@
 @import "descriptions";
 
 .breadcrumbs {
+  .full-width();
+  .hide-scrollbar();
+  overflow: auto;
   display: flex;
   gap: 3px;
-  padding-left: 14px;
+  padding-left: calc(@desktop-padding + 14px);
+
+  @media @tablet {
+    padding-left: 0;
+  }
 
   &__item {
     .fs12-16(400);
@@ -12,7 +19,13 @@
     position: relative;
     padding: @offset8 26px @offset8 @offset8;
 
+    @media @l-mobile {
+      .arrow-right(unset, 2px, @width:4, @height:4, 1, @turqs-main);
+      padding: @offset8 14px @offset8 2px;
+    }
+
     &:first-child {
+      padding-left: @mobile-padding;
       margin-left: 2px;
     }
 
@@ -20,12 +33,17 @@
       pointer-events: none;
       padding: @offset8;
 
+      @media @l-tablet {
+        padding-inline: 2px @mobile-padding;
+      }
+
       &::after {
         content: unset;
       }
     }
 
     & a {
+      white-space: nowrap;
       position: relative;
 
       &::after {
@@ -40,6 +58,7 @@
 
     &:last-child {
       a {
+
         &::after {
           content: unset;
         }
