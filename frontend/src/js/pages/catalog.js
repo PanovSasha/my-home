@@ -10,7 +10,7 @@
 import 'paginationjs/dist/pagination.min'
 import qs from 'qs'
 
-import { morph } from '../lib/utils'
+import { deleteSpinner, morph, renderSpinner } from '../lib/utils'
 import {
   $WINDOW,
   CHECKED_CLASS,
@@ -388,7 +388,7 @@ export const catalogFns = (data) => {
         return items
       }
 
-      $CATALOG_LIST.removeClass(NO_RESULT_CLASS).html('').append(renderDataItem(data))
+      $CATALOG_LIST.removeClass(NO_RESULT_CLASS).append(renderDataItem(data))
     }
 
     const getDataParams = () => {
@@ -458,6 +458,10 @@ export const catalogFns = (data) => {
 
       addFiltersValueToUrl(data)
 
+      $CATALOG_LIST.html('').addClass(NO_RESULT_CLASS)
+      $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
+      renderSpinner($CATALOG_LIST)
+
       $.ajax({
         type: 'POST',
         url: '/api/v1/getCatalogList',
@@ -468,6 +472,7 @@ export const catalogFns = (data) => {
         processData: true,
         success: (data) => {
           scrollToTopCatalog()
+          deleteSpinner()
 
           const { countRecord, endList, items, pageCount, pageSize } = data.data
 
@@ -476,9 +481,7 @@ export const catalogFns = (data) => {
           } else {
             $TITLE_COUNT.text(`Найдено проектов: 0`)
 
-            $CATALOG_LIST
-              .addClass(NO_RESULT_CLASS)
-              .html(`Проекты по&nbsp;вашим параметрам не&nbsp;найдены, измените условия поиска.`)
+            $CATALOG_LIST.html(`Проекты по&nbsp;вашим параметрам не&nbsp;найдены, измените условия поиска.`)
           }
 
           if (items.length) {

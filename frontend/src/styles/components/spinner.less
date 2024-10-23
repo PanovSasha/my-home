@@ -3,25 +3,11 @@
 .spinner {
   .circle(48);
   display: block;
-  border-top: 3px solid @black;
+  border-top: 3px solid @turqs-main;
   border-right: 3px solid transparent;
   animation: rotation 1s linear infinite;
   flex: none;
   margin: auto;
-
-  .catalog & {
-    grid-column-end: 3;
-    margin-block: @offset40;
-
-    @media @l-tablet {
-      grid-column-end: -1;
-      margin-inline: unset;
-    }
-
-    @media @l-mobile {
-      margin-inline: auto;
-    }
-  }
 }
 
 @keyframes rotation {
