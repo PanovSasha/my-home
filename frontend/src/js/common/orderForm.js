@@ -25,7 +25,6 @@ export const orderFormFns = () => {
 
     const clearInputs = () => {
       $inputs.val('')
-      phone.val('9')
     }
 
     const isInputsValues = (submitBtnClick) => {
@@ -191,10 +190,6 @@ export const orderFormFns = () => {
       })
 
       phone.on('input', () => {
-        if (phone.val().trim() === '') {
-          phone.val('9')
-        }
-
         checkPhoneValue()
       })
     }

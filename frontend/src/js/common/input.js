@@ -27,12 +27,8 @@ export const inputFunctions = () => {
 
     const eraseInputValByBtn = () => {
       $eraseBtn.on('click', function () {
-        if ($input.attr('name') === 'phone') {
-          $input.val('9').focus()
-        } else {
-          $input.val('').focus()
-          $eraseBtn.removeClass(SHOW_CLASS)
-        }
+        $input.val('').focus()
+        $eraseBtn.removeClass(SHOW_CLASS)
       })
     }
 
