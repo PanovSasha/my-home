@@ -1617,11 +1617,19 @@
       </div>
       
       <div class="youtube shell shell--grid shell--2 shell--gap-32">
-        <div class="picture picture--scale youtube__picture">
-          <img
-            loading="lazy"
+        <div
+          data-overlay-anchor="video"
+          class="picture picture--scale youtube__picture js-show-overlay-btn">
+          <video
+            muted
+            loop
+            playsinline
+            poster="/assets/img/pages/main/17.webp"
             class="picture__img youtube__picture-img"
-            src="/assets/img/pages/main/17.webp" alt="">
+          >
+            <source src="/assets/files/video/video.mp4"
+                    type="video/mp4" />
+          </video>
         </div>
         
         <div class="shell__block">
@@ -1935,5 +1943,15 @@
     </div>
   </div>
 </footer>
+
+<aside class="overlay js-overlay" aria-label="Site overlays">
+  <div data-overlay="video"
+       class="overlay__video overlay-video js-overlay-item">
+    <div class="overlay-video__shell js-overlay-video-shell">
+    
+    </div>
+  </div>
+</aside>
+
 </body>
 </html>
