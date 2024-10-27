@@ -26,6 +26,16 @@
       @media @large-than-tablet {
         .shadow-2xl();
         scale: 1.01;
+        opacity: 1;
+
+        &::before {
+          .smooth-show();
+          position: absolute;
+          inset: 0;
+          content: '';
+          background-color: fade(@black, 60%);
+          z-index: 1;
+        }
       }
     }
   }
@@ -56,6 +66,12 @@
       @media @l-mobile {
         aspect-ratio: 336/80;
       }
+
+      .types__card:hover & {
+        @media @large-than-tablet {
+          animation: low-opacity 0.2s linear;
+        }
+      }
     }
   }
 
@@ -65,5 +81,15 @@
 
   &__card-btn {
     pointer-events: none;
+  }
+}
+
+.low-opacity {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
   }
 }
