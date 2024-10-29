@@ -130,14 +130,13 @@ a {
 }
 
 .bx-component-opener, .bx-admin-prefix, .bx-core-dialog-overlay, .bxmedialib, .editor_dialog {
-  img, svg {
-    display: initial;
+  & img, svg {
+    display: inline;
     flex: none;
-    width: initial;
-    max-width: initial;
+    width: auto;
   }
 
-  a {
+  & a {
     display: inline;
     color: initial;
     text-decoration: initial;
