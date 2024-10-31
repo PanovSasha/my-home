@@ -35,7 +35,14 @@ export function overlaysFunctions() {
           .addClass('overlay-video__source')
           .removeClass('picture__img youtube__picture-img')
 
-        $videoShell.append($video)
+        $videoShell.append($video).append(`
+          <button class="btn overlay-video__close-btn js-overlay-video-close-btn">
+          </button>
+        `)
+
+        $('.js-overlay-video-close-btn').on('click', function () {
+          closeOverlay()
+        })
       }
 
       $overlay.addClass(SHOW_CLASS)
@@ -68,7 +75,16 @@ export function overlaysFunctions() {
     })
   }
 
+  const closeOverlayByOrderBtn = () => {
+    const $closeBtn = $('.js-topline-order-btn')
+
+    $closeBtn.on('click', function () {
+      closeOverlay()
+    })
+  }
+
   openOverlay()
   closeOverlayByActions()
   closeOverlayByCloseBtn()
+  closeOverlayByOrderBtn()
 }

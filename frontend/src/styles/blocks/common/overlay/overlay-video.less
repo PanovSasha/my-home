@@ -8,26 +8,26 @@
     max-height: 60dvh;
     object-fit: contain;
 
-    &::after {
-      .square(48);
-      content: '';
-      position: absolute;
-      top: -@offset64;
-      right: -@offset48;
-      background: url("/assets/svg/system/close-vdeo-btn.svg") center center / 48px 48px no-repeat;
-      pointer-events: none;
 
-      @media @l-mobile {
-        .square(24);
-        background-size: @offset24 @offset24;
-        top: -@offset32;
-        right: -@offset24;
-      }
-    }
   }
 
   &__source {
     width: 100%;
     height: 100%;
+  }
+
+  &__close-btn {
+    .square(48);
+    position: absolute;
+    top: -@offset64;
+    right: -@offset48;
+    background: url("/assets/svg/system/close-vdeo-btn.svg") center center / 48px 48px no-repeat;
+
+    @media @l-mobile {
+      .square(24);
+      background-size: @offset24 @offset24;
+      top: -@offset32;
+      right: -@offset24;
+    }
   }
 }
