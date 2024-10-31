@@ -1620,16 +1620,24 @@
         <div
           data-overlay-anchor="video"
           class="picture picture--scale youtube__picture js-show-overlay-btn">
-          <video
-            muted
-            loop
-            playsinline
-            poster="/assets/img/pages/main/17.webp"
+          <!--          <video-->
+          <!--            muted-->
+          <!--            loop-->
+          <!--            playsinline-->
+          <!--            poster="/assets/img/pages/main/17.webp"-->
+          <!--            class="picture__img youtube__picture-img"-->
+          <!--          >-->
+          <!--            <source src="/assets/files/video/video.mp4"-->
+          <!--                    type="video/mp4" />-->
+          <!--          </video>-->
+          
+          <iframe
+            src="https://www.youtube.com/embed/mMvvKt0ky5E?si=WRvQjFYj1F8Ku1OQ"
+            title="YouTube video player"
             class="picture__img youtube__picture-img"
-          >
-            <source src="/assets/files/video/video.mp4"
-                    type="video/mp4" />
-          </video>
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
         </div>
         
         <div class="shell__block">

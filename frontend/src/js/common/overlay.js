@@ -28,7 +28,9 @@ export function overlaysFunctions() {
       const overlayVal = $btn.attr('data-overlay-anchor')
 
       if (overlayVal === 'video') {
-        const $video = $btn.find('video').clone()
+        const $video = $btn.find('.youtube__picture-img').clone()
+        console.log($video[0].nodeName.toLowerCase())
+
         $video
           .attr('autoplay', 'true')
           .attr('controls', 'true')
@@ -39,6 +41,12 @@ export function overlaysFunctions() {
           <button class="btn overlay-video__close-btn js-overlay-video-close-btn">
           </button>
         `)
+
+        if ($video[0].nodeName.toLowerCase() === 'iframe') {
+          $videoShell.addClass('iframe-class')
+        } else {
+          $videoShell.removeClass('iframe-class')
+        }
 
         $('.js-overlay-video-close-btn').on('click', function () {
           closeOverlay()
