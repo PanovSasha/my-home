@@ -488,10 +488,8 @@ export const catalogFns = (data) => {
             renderData(items)
 
             if (countRecord > pageSize) {
-              if (currentPage === 1 && pageCount > 1) {
-                $CATALOG_RESULT.addClass(PAGINATION_CLASS)
-                renderPagination(countRecord, pageSize)
-              }
+              $CATALOG_RESULT.addClass(PAGINATION_CLASS)
+              renderPagination(countRecord, pageSize)
             } else {
               $CATALOG_RESULT.removeClass(PAGINATION_CLASS)
             }
@@ -583,10 +581,10 @@ export const catalogFns = (data) => {
 
       $PAGINATION.text('')
 
-      const { page } = qs.parse(window.location.search, { ignoreQueryPrefix: true })
+      const { currentPage } = qs.parse(window.location.search, { ignoreQueryPrefix: true })
 
-      if (page) {
-        pageNumber = page
+      if (currentPage) {
+        pageNumber = currentPage
       }
 
       $PAGINATION.pagination({
