@@ -10,7 +10,7 @@
 import 'paginationjs/dist/pagination.min'
 import qs from 'qs'
 
-import { deleteSpinner, morph, renderSpinner } from '../lib/utils'
+import { deleteSpinner, renderSpinner } from '../lib/utils'
 import {
   $WINDOW,
   CHECKED_CLASS,
@@ -343,7 +343,7 @@ export const catalogFns = (data) => {
                     </span>
                     
                     <span class="houses__card-prop">
-                      ${morph(numberRooms, ['комната', 'комнаты', 'комнат'])}
+                      ${numberRooms}
                     </span>
                   </div>
                 </div>
